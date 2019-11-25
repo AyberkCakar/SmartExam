@@ -91,6 +91,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSinavSinif = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -253,7 +255,7 @@
             // 
             this.xtraTabControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.xtraTabControl1.Appearance.Options.UseBackColor = true;
-            this.xtraTabControl1.Location = new System.Drawing.Point(268, -22);
+            this.xtraTabControl1.Location = new System.Drawing.Point(268, -5);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
             this.xtraTabControl1.Size = new System.Drawing.Size(1096, 787);
@@ -297,6 +299,7 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // button4
             // 
@@ -468,6 +471,8 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtSinavSinif);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txtBos);
@@ -495,7 +500,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(14, 182);
+            this.label15.Location = new System.Drawing.Point(14, 221);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(105, 22);
             this.label15.TabIndex = 151;
@@ -582,7 +587,7 @@
             this.txtSoruSayısı.Enabled = false;
             this.txtSoruSayısı.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSoruSayısı.ForeColor = System.Drawing.Color.Black;
-            this.txtSoruSayısı.Location = new System.Drawing.Point(125, 182);
+            this.txtSoruSayısı.Location = new System.Drawing.Point(125, 221);
             this.txtSoruSayısı.Multiline = true;
             this.txtSoruSayısı.Name = "txtSoruSayısı";
             this.txtSoruSayısı.Size = new System.Drawing.Size(92, 29);
@@ -979,13 +984,38 @@
             this.label18.TabIndex = 128;
             this.label18.Text = "Soyad:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(71, 182);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 22);
+            this.label1.TabIndex = 153;
+            this.label1.Text = "Sınıf:";
+            // 
+            // txtSinavSinif
+            // 
+            this.txtSinavSinif.BackColor = System.Drawing.Color.White;
+            this.txtSinavSinif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSinavSinif.Enabled = false;
+            this.txtSinavSinif.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSinavSinif.ForeColor = System.Drawing.Color.Black;
+            this.txtSinavSinif.Location = new System.Drawing.Point(125, 182);
+            this.txtSinavSinif.Multiline = true;
+            this.txtSinavSinif.Name = "txtSinavSinif";
+            this.txtSinavSinif.Size = new System.Drawing.Size(92, 29);
+            this.txtSinavSinif.TabIndex = 152;
+            // 
             // OgrenciScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1368, 769);
+            this.ClientSize = new System.Drawing.Size(1368, 879);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCikis);
@@ -998,6 +1028,7 @@
             this.Name = "OgrenciScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.OgrenciScreen_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1084,6 +1115,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSinavSinif;
     }
 }
 

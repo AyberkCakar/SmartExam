@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace SmartExam
 {
-    public class Ders
+    public interface ISinavIslemleri
     {
-        public string DersID { get; set; }
-        public string DersAD { get; set; }
+        void SinavlariGetir();
     }
 }

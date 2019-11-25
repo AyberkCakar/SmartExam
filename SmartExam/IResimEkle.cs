@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace SmartExam
 {
-    public class Ders
+    public interface IResimEkle
     {
-        public string DersID { get; set; }
-        public string DersAD { get; set; }
+        void ResimEkle();
+        void ResimUpdate();
+        void ResimSil();
     }
 }

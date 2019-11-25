@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1
+namespace SmartExam
 {
-    public abstract class Kisi
+    public abstract class Kisi:IResimEkle
     {
         public int ID { get; set; }
         public string Ad { get; set; }
@@ -15,8 +15,22 @@ namespace WindowsFormsApp1
         public string Cinsiyet { get; set; }
         public DateTime DogumTarihi { get; set; }
         public string Resim { get; set; }
-        public string KullanıcıAdi { get; set; }
+        public string KullanıcıID { get; set; }
         public string Sifre { get; set; }
 
+        public void ResimEkle()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ResimSil()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ResimUpdate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
