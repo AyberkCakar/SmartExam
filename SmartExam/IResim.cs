@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace SmartExam
 {
-    public interface IResimEkle
+    public interface IResim
     {
-        void ResimEkle();
-        void ResimUpdate();
-        void ResimSil();
+        string Resim { get; set; }
+
     }
 }

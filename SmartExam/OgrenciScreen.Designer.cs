@@ -46,30 +46,27 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cmbSınıf = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cmbSoruSayisi = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbDers = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSinaviBaslat = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.txtTarih = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSinavSinif = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtBos = new System.Windows.Forms.TextBox();
-            this.btnSinaviBaslat = new System.Windows.Forms.Button();
             this.txtDers = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtSoruSayısı = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSinavNo = new System.Windows.Forms.TextBox();
             this.txtSinavDogru = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSinavYanlis = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtSinavDurum = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -91,8 +88,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSinavSinif = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -102,7 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSınıf.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSoruSayisi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDers.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             this.xtraTabPage4.SuspendLayout();
@@ -188,6 +182,7 @@
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCikis.ForeColor = System.Drawing.Color.White;
+            this.btnCikis.Image = global::SmartExam.Properties.Resources.exit50;
             this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCikis.Location = new System.Drawing.Point(2, 684);
             this.btnCikis.Margin = new System.Windows.Forms.Padding(4);
@@ -205,6 +200,7 @@
             this.btnBilgilerim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBilgilerim.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBilgilerim.ForeColor = System.Drawing.Color.White;
+            this.btnBilgilerim.Image = global::SmartExam.Properties.Resources.account50;
             this.btnBilgilerim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBilgilerim.Location = new System.Drawing.Point(3, 605);
             this.btnBilgilerim.Margin = new System.Windows.Forms.Padding(4);
@@ -222,6 +218,7 @@
             this.btnIstatistik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIstatistik.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIstatistik.ForeColor = System.Drawing.Color.White;
+            this.btnIstatistik.Image = global::SmartExam.Properties.Resources.analytics__1_50;
             this.btnIstatistik.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIstatistik.Location = new System.Drawing.Point(3, 524);
             this.btnIstatistik.Margin = new System.Windows.Forms.Padding(4);
@@ -241,6 +238,7 @@
             this.btnSinavlarim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSinavlarim.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSinavlarim.ForeColor = System.Drawing.Color.White;
+            this.btnSinavlarim.Image = global::SmartExam.Properties.Resources.exam__3_50;
             this.btnSinavlarim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSinavlarim.Location = new System.Drawing.Point(3, 443);
             this.btnSinavlarim.Margin = new System.Windows.Forms.Padding(4);
@@ -255,7 +253,7 @@
             // 
             this.xtraTabControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.xtraTabControl1.Appearance.Options.UseBackColor = true;
-            this.xtraTabControl1.Location = new System.Drawing.Point(268, -5);
+            this.xtraTabControl1.Location = new System.Drawing.Point(268, -21);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
             this.xtraTabControl1.Size = new System.Drawing.Size(1096, 787);
@@ -324,12 +322,10 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.cmbSınıf);
-            this.panel3.Controls.Add(this.cmbSoruSayisi);
             this.panel3.Controls.Add(this.cmbDers);
             this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.btnSinaviBaslat);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Location = new System.Drawing.Point(565, 404);
             this.panel3.Name = "panel3";
@@ -338,7 +334,7 @@
             // 
             // cmbSınıf
             // 
-            this.cmbSınıf.Location = new System.Drawing.Point(199, 139);
+            this.cmbSınıf.Location = new System.Drawing.Point(199, 171);
             this.cmbSınıf.Name = "cmbSınıf";
             this.cmbSınıf.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.cmbSınıf.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -355,30 +351,9 @@
             this.cmbSınıf.Size = new System.Drawing.Size(155, 26);
             this.cmbSınıf.TabIndex = 155;
             // 
-            // cmbSoruSayisi
-            // 
-            this.cmbSoruSayisi.Location = new System.Drawing.Point(199, 181);
-            this.cmbSoruSayisi.Name = "cmbSoruSayisi";
-            this.cmbSoruSayisi.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.cmbSoruSayisi.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cmbSoruSayisi.Properties.Appearance.Options.UseFont = true;
-            this.cmbSoruSayisi.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbSoruSayisi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.cmbSoruSayisi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbSoruSayisi.Properties.Items.AddRange(new object[] {
-            "5",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30"});
-            this.cmbSoruSayisi.Size = new System.Drawing.Size(155, 26);
-            this.cmbSoruSayisi.TabIndex = 154;
-            // 
             // cmbDers
             // 
-            this.cmbDers.Location = new System.Drawing.Point(199, 97);
+            this.cmbDers.Location = new System.Drawing.Point(199, 129);
             this.cmbDers.Name = "cmbDers";
             this.cmbDers.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.cmbDers.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -403,7 +378,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(128, 98);
+            this.label21.Location = new System.Drawing.Point(128, 130);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(54, 22);
             this.label21.TabIndex = 152;
@@ -415,39 +390,28 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(134, 140);
+            this.label20.Location = new System.Drawing.Point(134, 172);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(48, 22);
             this.label20.TabIndex = 151;
             this.label20.Text = "Sınıf:";
             // 
-            // label19
+            // btnSinaviBaslat
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(77, 182);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(105, 22);
-            this.label19.TabIndex = 150;
-            this.label19.Text = "Soru Sayısı:";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(138, 287);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(251, 40);
-            this.button3.TabIndex = 149;
-            this.button3.Text = "Sınav Oluştur";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSinaviBaslat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.btnSinaviBaslat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSinaviBaslat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSinaviBaslat.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSinaviBaslat.ForeColor = System.Drawing.Color.Black;
+            this.btnSinaviBaslat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSinaviBaslat.Location = new System.Drawing.Point(132, 244);
+            this.btnSinaviBaslat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSinaviBaslat.Name = "btnSinaviBaslat";
+            this.btnSinaviBaslat.Size = new System.Drawing.Size(251, 32);
+            this.btnSinaviBaslat.TabIndex = 124;
+            this.btnSinaviBaslat.Text = "Sınavı Başlat";
+            this.btnSinaviBaslat.UseVisualStyleBackColor = false;
+            this.btnSinaviBaslat.Click += new System.EventHandler(this.btnSinaviBaslat_Click);
             // 
             // button2
             // 
@@ -471,40 +435,75 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtTarih);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtSinavSinif);
-            this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txtBos);
-            this.panel2.Controls.Add(this.btnSinaviBaslat);
             this.panel2.Controls.Add(this.txtDers);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.txtSoruSayısı);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtSinavNo);
             this.panel2.Controls.Add(this.txtSinavDogru);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtSinavYanlis);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.txtSinavDurum);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(5, 404);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(554, 352);
             this.panel2.TabIndex = 141;
             // 
-            // label15
+            // txtTarih
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(14, 221);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(105, 22);
-            this.label15.TabIndex = 151;
-            this.label15.Text = "Soru Sayısı:";
+            this.txtTarih.BackColor = System.Drawing.Color.White;
+            this.txtTarih.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTarih.Enabled = false;
+            this.txtTarih.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTarih.ForeColor = System.Drawing.Color.Black;
+            this.txtTarih.Location = new System.Drawing.Point(377, 94);
+            this.txtTarih.Multiline = true;
+            this.txtTarih.Name = "txtTarih";
+            this.txtTarih.Size = new System.Drawing.Size(110, 29);
+            this.txtTarih.TabIndex = 155;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(314, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 22);
+            this.label3.TabIndex = 154;
+            this.label3.Text = "Tarih:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(71, 182);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 22);
+            this.label1.TabIndex = 153;
+            this.label1.Text = "Sınıf:";
+            // 
+            // txtSinavSinif
+            // 
+            this.txtSinavSinif.BackColor = System.Drawing.Color.White;
+            this.txtSinavSinif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSinavSinif.Enabled = false;
+            this.txtSinavSinif.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSinavSinif.ForeColor = System.Drawing.Color.Black;
+            this.txtSinavSinif.Location = new System.Drawing.Point(125, 182);
+            this.txtSinavSinif.Multiline = true;
+            this.txtSinavSinif.Name = "txtSinavSinif";
+            this.txtSinavSinif.Size = new System.Drawing.Size(92, 29);
+            this.txtSinavSinif.TabIndex = 152;
             // 
             // button1
             // 
@@ -532,28 +531,11 @@
             this.txtBos.Enabled = false;
             this.txtBos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBos.ForeColor = System.Drawing.Color.Black;
-            this.txtBos.Location = new System.Drawing.Point(412, 221);
+            this.txtBos.Location = new System.Drawing.Point(377, 221);
             this.txtBos.Multiline = true;
             this.txtBos.Name = "txtBos";
             this.txtBos.Size = new System.Drawing.Size(110, 29);
             this.txtBos.TabIndex = 146;
-            // 
-            // btnSinaviBaslat
-            // 
-            this.btnSinaviBaslat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.btnSinaviBaslat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSinaviBaslat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSinaviBaslat.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSinaviBaslat.ForeColor = System.Drawing.Color.Black;
-            this.btnSinaviBaslat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSinaviBaslat.Location = new System.Drawing.Point(155, 287);
-            this.btnSinaviBaslat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSinaviBaslat.Name = "btnSinaviBaslat";
-            this.btnSinaviBaslat.Size = new System.Drawing.Size(251, 40);
-            this.btnSinaviBaslat.TabIndex = 124;
-            this.btnSinaviBaslat.Text = "Sınavı Başlat";
-            this.btnSinaviBaslat.UseVisualStyleBackColor = false;
-            this.btnSinaviBaslat.Click += new System.EventHandler(this.btnSinaviBaslat_Click);
             // 
             // txtDers
             // 
@@ -580,26 +562,13 @@
             this.label10.TabIndex = 143;
             this.label10.Text = "Ders:";
             // 
-            // txtSoruSayısı
-            // 
-            this.txtSoruSayısı.BackColor = System.Drawing.Color.White;
-            this.txtSoruSayısı.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoruSayısı.Enabled = false;
-            this.txtSoruSayısı.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSoruSayısı.ForeColor = System.Drawing.Color.Black;
-            this.txtSoruSayısı.Location = new System.Drawing.Point(125, 221);
-            this.txtSoruSayısı.Multiline = true;
-            this.txtSoruSayısı.Name = "txtSoruSayısı";
-            this.txtSoruSayısı.Size = new System.Drawing.Size(92, 29);
-            this.txtSoruSayısı.TabIndex = 142;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(361, 221);
+            this.label6.Location = new System.Drawing.Point(326, 221);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 22);
             this.label6.TabIndex = 141;
@@ -625,7 +594,7 @@
             this.txtSinavDogru.Enabled = false;
             this.txtSinavDogru.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSinavDogru.ForeColor = System.Drawing.Color.Black;
-            this.txtSinavDogru.Location = new System.Drawing.Point(412, 133);
+            this.txtSinavDogru.Location = new System.Drawing.Point(377, 133);
             this.txtSinavDogru.Multiline = true;
             this.txtSinavDogru.Name = "txtSinavDogru";
             this.txtSinavDogru.Size = new System.Drawing.Size(110, 29);
@@ -650,7 +619,7 @@
             this.txtSinavYanlis.Enabled = false;
             this.txtSinavYanlis.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSinavYanlis.ForeColor = System.Drawing.Color.Black;
-            this.txtSinavYanlis.Location = new System.Drawing.Point(412, 177);
+            this.txtSinavYanlis.Location = new System.Drawing.Point(377, 177);
             this.txtSinavYanlis.Multiline = true;
             this.txtSinavYanlis.Name = "txtSinavYanlis";
             this.txtSinavYanlis.Size = new System.Drawing.Size(110, 29);
@@ -662,24 +631,11 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(337, 133);
+            this.label7.Location = new System.Drawing.Point(302, 133);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 22);
             this.label7.TabIndex = 121;
             this.label7.Text = "Doğru:";
-            // 
-            // txtSinavDurum
-            // 
-            this.txtSinavDurum.BackColor = System.Drawing.Color.White;
-            this.txtSinavDurum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSinavDurum.Enabled = false;
-            this.txtSinavDurum.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSinavDurum.ForeColor = System.Drawing.Color.Black;
-            this.txtSinavDurum.Location = new System.Drawing.Point(412, 89);
-            this.txtSinavDurum.Multiline = true;
-            this.txtSinavDurum.Name = "txtSinavDurum";
-            this.txtSinavDurum.Size = new System.Drawing.Size(110, 29);
-            this.txtSinavDurum.TabIndex = 137;
             // 
             // label8
             // 
@@ -687,23 +643,11 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(342, 178);
+            this.label8.Location = new System.Drawing.Point(307, 178);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 22);
             this.label8.TabIndex = 122;
             this.label8.Text = "Yanlış:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(266, 94);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 22);
-            this.label9.TabIndex = 123;
-            this.label9.Text = "Sınav Durumu:";
             // 
             // xtraTabPage3
             // 
@@ -984,38 +928,13 @@
             this.label18.TabIndex = 128;
             this.label18.Text = "Soyad:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(71, 182);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 22);
-            this.label1.TabIndex = 153;
-            this.label1.Text = "Sınıf:";
-            // 
-            // txtSinavSinif
-            // 
-            this.txtSinavSinif.BackColor = System.Drawing.Color.White;
-            this.txtSinavSinif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSinavSinif.Enabled = false;
-            this.txtSinavSinif.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSinavSinif.ForeColor = System.Drawing.Color.Black;
-            this.txtSinavSinif.Location = new System.Drawing.Point(125, 182);
-            this.txtSinavSinif.Multiline = true;
-            this.txtSinavSinif.Name = "txtSinavSinif";
-            this.txtSinavSinif.Size = new System.Drawing.Size(92, 29);
-            this.txtSinavSinif.TabIndex = 152;
-            // 
             // OgrenciScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1368, 879);
+            this.ClientSize = new System.Drawing.Size(1367, 765);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCikis);
@@ -1040,7 +959,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSınıf.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSoruSayisi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDers.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -1068,16 +986,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtDers;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtSoruSayısı;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtSinavNo;
         private System.Windows.Forms.TextBox txtSinavDogru;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSinavYanlis;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtSinavDurum;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSinaviBaslat;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
@@ -1105,18 +1020,16 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.Button button4;
         private DevExpress.XtraEditors.ComboBoxEdit cmbSınıf;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbSoruSayisi;
         private DevExpress.XtraEditors.ComboBoxEdit cmbDers;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSinavSinif;
+        private System.Windows.Forms.TextBox txtTarih;
+        private System.Windows.Forms.Label label3;
     }
 }
 

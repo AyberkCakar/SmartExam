@@ -13,17 +13,17 @@ namespace SmartExam
         public string Brans { get; set; }
         public Ogretmen(string KullaniciAdi)
         {
-            this.kullaniciAdi = kullaniciAdi;
+            this.kullaniciAdi = KullaniciAdi;
         }
-        private ISoruIslemleri soruIslemleri;
-        
+        //private ISoruIslemleri soruIslemleri;
+
         public Ogretmen()
         {
         }
-        void SorularıGetir()
-        {
-            soruIslemleri.TumSorulariGetir();
-        }
+        //void SorularıGetir()
+        //{
+        //    soruIslemleri.TumSorulariGetir();
+        //}
 
         public void SoruEkle(Soru soru)
         {

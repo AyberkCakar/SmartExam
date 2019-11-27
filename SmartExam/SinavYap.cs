@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartExam
 {
-    public class Soru:IResim,ISoruIslemleri
+    public class SinavYap
     {
         public int SoruID { get; set; }
         public string SoruIcerik { get; set; }
@@ -17,11 +17,9 @@ namespace SmartExam
         public string ECevabi { get; set; }
         public string Cevap { get; set; }
         public string Resim { get; set; }
-
-        public void TumSorulariGetir()
-        {
-            throw new NotImplementedException();
-            
-        }
+        public int KonuID { get; set; }
+        public bool dogruYanlıs { get; set; }
+        public List<SinavYap> sinavYaps = new List<SinavYap>();
+        public List<SinavYap> sinavKaydet = new List<SinavYap>();
     }
 }
