@@ -9,30 +9,20 @@ namespace SmartExam
 {
     class GirisServisi
     {
-        public static bool KullaniciOgrDogrula(string kullaniciAdi, string sifre) //  Öğrenci adi şifre kontrolü
+        //
+        // Bilgi Doğrulama İşlemleri
+        //
+
+        // Öğrenci Bilgi Doğrulama
+
+        public static bool OgrenciDogrula(string kullaniciAdi, string sifre) 
         {
             sqlBaglanti connect = new sqlBaglanti();
-            SqlCommand komut = new SqlCommand("Select * From Tbl_Ogrenci where KullaniciAdi =@p1 and Sifre = @p2", connect.baglanti());
-            komut.Parameters.AddWithValue("@p1", kullaniciAdi);
-            komut.Parameters.AddWithValue("@p2", sifre);
-            SqlDataReader dr1 = komut.ExecuteReader();
-            if (dr1.Read())
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public static bool KullaniciOgrtDogrula(string kullaniciAdi, string sifre)// Öğretmen  adi şifre kontrolü
-        {
-            sqlBaglanti connect = new sqlBaglanti();
-            SqlCommand komut = new SqlCommand("Select * From Tbl_Ogretmen where KullaniciAdi =@p1 and Sifre = @p2", connect.baglanti());
-            komut.Parameters.AddWithValue("@p1", kullaniciAdi);
-            komut.Parameters.AddWithValue("@p2", sifre);
-            SqlDataReader dr1 = komut.ExecuteReader();
-            if (dr1.Read())
+            SqlCommand ogrenciSelect = new SqlCommand("Select * From Tbl_Ogrenci where KullaniciAdi =@p1 and Sifre = @p2", connect.baglanti());
+            ogrenciSelect.Parameters.AddWithValue("@p1", kullaniciAdi);
+            ogrenciSelect.Parameters.AddWithValue("@p2", sifre);
+            SqlDataReader drOgrenci = ogrenciSelect.ExecuteReader();
+            if (drOgrenci.Read())
             {
                 return true;
             }
@@ -42,9 +32,34 @@ namespace SmartExam
             }
         }
 
-        public Kisi GirisYap(string kullaniciAdi, string sifre) //Öğrenci giriş yapma
+        // Öğretmen Bilgi Doğrulama
+
+        public static bool OgretmenDogrula(string kullaniciAdi, string sifre)
         {
-            if (KullaniciOgrDogrula(kullaniciAdi, sifre))
+            sqlBaglanti connect = new sqlBaglanti();
+            SqlCommand ogretmenSelect = new SqlCommand("Select * From Tbl_Ogretmen where KullaniciAdi =@p1 and Sifre = @p2", connect.baglanti());
+            ogretmenSelect.Parameters.AddWithValue("@p1", kullaniciAdi);
+            ogretmenSelect.Parameters.AddWithValue("@p2", sifre);
+            SqlDataReader drOgretmen = ogretmenSelect.ExecuteReader();
+            if (drOgretmen.Read())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //
+        // Giriş Yapma İşlemleri
+        //
+
+        // Öğrenci Giriş Yapma
+
+        public Kisi GirisYapOgrenci(string kullaniciAdi, string sifre) 
+        {
+            if (OgrenciDogrula(kullaniciAdi, sifre))
             {
                 return new Ogrenci(kullaniciAdi);
             }
@@ -53,9 +68,12 @@ namespace SmartExam
                 return null;
             }
         }
-        public Kisi GirisYapOgrt(string kullaniciAdi, string sifre) // Öğretmen Giriş Yapma
+
+        // Öğretmen Giriş Yapma
+
+        public Kisi GirisYapOgretmen(string kullaniciAdi, string sifre) 
         {
-            if (KullaniciOgrtDogrula(kullaniciAdi, sifre))
+            if (OgretmenDogrula(kullaniciAdi, sifre))
             {
                 return new Ogretmen(kullaniciAdi);
             }

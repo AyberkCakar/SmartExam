@@ -19,6 +19,7 @@ namespace SmartExam
         public string Resim { get; set; }
         public int KonuID { get; set; }
         public bool dogruYanlıs { get; set; }
+
         public List<SinavYap> sinavYaps = new List<SinavYap>();
         public List<SinavYap> sinavKaydet = new List<SinavYap>();
     }

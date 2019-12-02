@@ -16,7 +16,7 @@ namespace SmartExam
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OgrenciScreen());
+            Application.Run(new FrmGiris());
         }
     }
 }

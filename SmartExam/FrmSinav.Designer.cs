@@ -47,6 +47,8 @@
             this.button11 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNext = new DevExpress.XtraEditors.SimpleButton();
             this.lblSoruNo1 = new DevExpress.XtraEditors.LabelControl();
             this.pnlDogruYanlis = new System.Windows.Forms.Panel();
             this.lblBos = new DevExpress.XtraEditors.LabelControl();
@@ -119,7 +121,7 @@
             this.btnA.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnA.ForeColor = System.Drawing.Color.Black;
             this.btnA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnA.Location = new System.Drawing.Point(169, 356);
+            this.btnA.Location = new System.Drawing.Point(199, 371);
             this.btnA.Margin = new System.Windows.Forms.Padding(4);
             this.btnA.Name = "btnA";
             this.btnA.Size = new System.Drawing.Size(41, 39);
@@ -136,7 +138,7 @@
             this.btnB.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnB.ForeColor = System.Drawing.Color.Black;
             this.btnB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnB.Location = new System.Drawing.Point(169, 422);
+            this.btnB.Location = new System.Drawing.Point(199, 437);
             this.btnB.Margin = new System.Windows.Forms.Padding(4);
             this.btnB.Name = "btnB";
             this.btnB.Size = new System.Drawing.Size(41, 39);
@@ -153,7 +155,7 @@
             this.btnC.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnC.ForeColor = System.Drawing.Color.Black;
             this.btnC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnC.Location = new System.Drawing.Point(169, 488);
+            this.btnC.Location = new System.Drawing.Point(199, 503);
             this.btnC.Margin = new System.Windows.Forms.Padding(4);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(41, 39);
@@ -170,7 +172,7 @@
             this.btnD.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnD.ForeColor = System.Drawing.Color.Black;
             this.btnD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnD.Location = new System.Drawing.Point(169, 554);
+            this.btnD.Location = new System.Drawing.Point(199, 569);
             this.btnD.Margin = new System.Windows.Forms.Padding(4);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(41, 39);
@@ -187,7 +189,7 @@
             this.btnE.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnE.ForeColor = System.Drawing.Color.Black;
             this.btnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnE.Location = new System.Drawing.Point(169, 620);
+            this.btnE.Location = new System.Drawing.Point(199, 635);
             this.btnE.Margin = new System.Windows.Forms.Padding(4);
             this.btnE.Name = "btnE";
             this.btnE.Size = new System.Drawing.Size(41, 39);
@@ -202,7 +204,7 @@
             this.lblCevapA.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.lblCevapA.Appearance.Options.UseBackColor = true;
             this.lblCevapA.Appearance.Options.UseFont = true;
-            this.lblCevapA.Location = new System.Drawing.Point(232, 362);
+            this.lblCevapA.Location = new System.Drawing.Point(262, 377);
             this.lblCevapA.Name = "lblCevapA";
             this.lblCevapA.Size = new System.Drawing.Size(140, 24);
             this.lblCevapA.TabIndex = 130;
@@ -214,7 +216,7 @@
             this.lblCevapB.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.lblCevapB.Appearance.Options.UseBackColor = true;
             this.lblCevapB.Appearance.Options.UseFont = true;
-            this.lblCevapB.Location = new System.Drawing.Point(232, 428);
+            this.lblCevapB.Location = new System.Drawing.Point(262, 443);
             this.lblCevapB.Name = "lblCevapB";
             this.lblCevapB.Size = new System.Drawing.Size(140, 24);
             this.lblCevapB.TabIndex = 131;
@@ -226,7 +228,7 @@
             this.lblCevapC.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.lblCevapC.Appearance.Options.UseBackColor = true;
             this.lblCevapC.Appearance.Options.UseFont = true;
-            this.lblCevapC.Location = new System.Drawing.Point(232, 494);
+            this.lblCevapC.Location = new System.Drawing.Point(262, 509);
             this.lblCevapC.Name = "lblCevapC";
             this.lblCevapC.Size = new System.Drawing.Size(140, 24);
             this.lblCevapC.TabIndex = 132;
@@ -238,7 +240,7 @@
             this.lblCevapD.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.lblCevapD.Appearance.Options.UseBackColor = true;
             this.lblCevapD.Appearance.Options.UseFont = true;
-            this.lblCevapD.Location = new System.Drawing.Point(232, 560);
+            this.lblCevapD.Location = new System.Drawing.Point(262, 575);
             this.lblCevapD.Name = "lblCevapD";
             this.lblCevapD.Size = new System.Drawing.Size(112, 24);
             this.lblCevapD.TabIndex = 133;
@@ -250,7 +252,7 @@
             this.lblCevapE.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.lblCevapE.Appearance.Options.UseBackColor = true;
             this.lblCevapE.Appearance.Options.UseFont = true;
-            this.lblCevapE.Location = new System.Drawing.Point(232, 626);
+            this.lblCevapE.Location = new System.Drawing.Point(262, 641);
             this.lblCevapE.Name = "lblCevapE";
             this.lblCevapE.Size = new System.Drawing.Size(140, 24);
             this.lblCevapE.TabIndex = 134;
@@ -264,7 +266,7 @@
             this.lblSure.Appearance.Options.UseBackColor = true;
             this.lblSure.Appearance.Options.UseFont = true;
             this.lblSure.Appearance.Options.UseForeColor = true;
-            this.lblSure.Location = new System.Drawing.Point(536, 766);
+            this.lblSure.Location = new System.Drawing.Point(1199, 263);
             this.lblSure.Name = "lblSure";
             this.lblSure.Size = new System.Drawing.Size(55, 36);
             this.lblSure.TabIndex = 139;
@@ -283,7 +285,7 @@
             this.btnBitir.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnBitir.Image = global::SmartExam.Properties.Resources.racing_flag75;
             this.btnBitir.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnBitir.Location = new System.Drawing.Point(716, 690);
+            this.btnBitir.Location = new System.Drawing.Point(1097, 350);
             this.btnBitir.Name = "btnBitir";
             this.btnBitir.Size = new System.Drawing.Size(183, 91);
             this.btnBitir.TabIndex = 138;
@@ -302,7 +304,7 @@
             this.button11.ForeColor = System.Drawing.Color.Black;
             this.button11.Image = global::SmartExam.Properties.Resources.hourglass75;
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(468, 739);
+            this.button11.Location = new System.Drawing.Point(1131, 236);
             this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(71, 90);
@@ -316,13 +318,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblSure);
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.btnNext);
+            this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.lblSoruNo1);
             this.panel1.Controls.Add(this.pnlDogruYanlis);
             this.panel1.Controls.Add(this.lblCevap);
             this.panel1.Controls.Add(this.btnCikis);
             this.panel1.Controls.Add(this.lblSoruID);
             this.panel1.Controls.Add(this.lblSoruCevap);
-            this.panel1.Controls.Add(this.gridControl1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblCevapA);
             this.panel1.Controls.Add(this.btnBitir);
@@ -342,13 +347,54 @@
             this.panel1.Size = new System.Drawing.Size(1284, 802);
             this.panel1.TabIndex = 142;
             // 
+            // btnBack
+            // 
+            this.btnBack.Appearance.BackColor = System.Drawing.Color.White;
+            this.btnBack.Appearance.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBack.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnBack.Appearance.Options.UseBackColor = true;
+            this.btnBack.Appearance.Options.UseFont = true;
+            this.btnBack.Appearance.Options.UseForeColor = true;
+            this.btnBack.AppearancePressed.BackColor = System.Drawing.Color.White;
+            this.btnBack.AppearancePressed.Options.UseBackColor = true;
+            this.btnBack.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnBack.Enabled = false;
+            this.btnBack.Image = global::SmartExam.Properties.Resources.left_arrow;
+            this.btnBack.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnBack.Location = new System.Drawing.Point(958, 681);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(153, 99);
+            this.btnBack.TabIndex = 153;
+            this.btnBack.Text = "Back";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Appearance.BackColor = System.Drawing.Color.White;
+            this.btnNext.Appearance.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnNext.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnNext.Appearance.Options.UseBackColor = true;
+            this.btnNext.Appearance.Options.UseFont = true;
+            this.btnNext.Appearance.Options.UseForeColor = true;
+            this.btnNext.AppearancePressed.BackColor = System.Drawing.Color.White;
+            this.btnNext.AppearancePressed.Options.UseBackColor = true;
+            this.btnNext.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnNext.Image = global::SmartExam.Properties.Resources.right_arrow;
+            this.btnNext.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnNext.Location = new System.Drawing.Point(1117, 681);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(153, 99);
+            this.btnNext.TabIndex = 152;
+            this.btnNext.Text = "Next";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
             // lblSoruNo1
             // 
             this.lblSoruNo1.Appearance.BackColor = System.Drawing.Color.White;
             this.lblSoruNo1.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.lblSoruNo1.Appearance.Options.UseBackColor = true;
             this.lblSoruNo1.Appearance.Options.UseFont = true;
-            this.lblSoruNo1.Location = new System.Drawing.Point(116, 745);
+            this.lblSoruNo1.Location = new System.Drawing.Point(476, 775);
             this.lblSoruNo1.Name = "lblSoruNo1";
             this.lblSoruNo1.Size = new System.Drawing.Size(12, 24);
             this.lblSoruNo1.TabIndex = 151;
@@ -448,7 +494,7 @@
             this.lblCevap.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.lblCevap.Appearance.Options.UseBackColor = true;
             this.lblCevap.Appearance.Options.UseFont = true;
-            this.lblCevap.Location = new System.Drawing.Point(51, 699);
+            this.lblCevap.Location = new System.Drawing.Point(47, 751);
             this.lblCevap.Name = "lblCevap";
             this.lblCevap.Size = new System.Drawing.Size(77, 24);
             this.lblCevap.TabIndex = 149;
@@ -468,7 +514,7 @@
             this.btnCikis.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnCikis.Image = global::SmartExam.Properties.Resources.cancel775;
             this.btnCikis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnCikis.Location = new System.Drawing.Point(1010, 688);
+            this.btnCikis.Location = new System.Drawing.Point(1097, 470);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(181, 91);
             this.btnCikis.TabIndex = 148;
@@ -481,7 +527,7 @@
             this.lblSoruID.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.lblSoruID.Appearance.Options.UseBackColor = true;
             this.lblSoruID.Appearance.Options.UseFont = true;
-            this.lblSoruID.Location = new System.Drawing.Point(51, 745);
+            this.lblSoruID.Location = new System.Drawing.Point(411, 775);
             this.lblSoruID.Name = "lblSoruID";
             this.lblSoruID.Size = new System.Drawing.Size(12, 24);
             this.lblSoruID.TabIndex = 147;
@@ -494,7 +540,7 @@
             this.lblSoruCevap.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.lblSoruCevap.Appearance.Options.UseBackColor = true;
             this.lblSoruCevap.Appearance.Options.UseFont = true;
-            this.lblSoruCevap.Location = new System.Drawing.Point(138, 699);
+            this.lblSoruCevap.Location = new System.Drawing.Point(134, 751);
             this.lblSoruCevap.Name = "lblSoruCevap";
             this.lblSoruCevap.Size = new System.Drawing.Size(72, 24);
             this.lblSoruCevap.TabIndex = 146;
@@ -504,13 +550,14 @@
             // gridControl1
             // 
             this.gridControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridControl1.Location = new System.Drawing.Point(1175, 232);
+            this.gridControl1.Location = new System.Drawing.Point(1317, 350);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1012, 302);
             this.gridControl1.TabIndex = 145;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Visible = false;
             // 
             // gridView1
             // 
@@ -562,7 +609,6 @@
             this.gridView1.OptionsSelection.InvertSelection = true;
             this.gridView1.OptionsSelection.ResetSelectionClickOutsideCheckboxSelector = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // pictureBox1
             // 
@@ -580,10 +626,9 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(1368, 879);
-            this.Controls.Add(this.lblSure);
             this.Controls.Add(this.lblDers);
-            this.Controls.Add(this.button11);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.gridControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -638,5 +683,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl lblSoruNo1;
+        private DevExpress.XtraEditors.SimpleButton btnNext;
+        private DevExpress.XtraEditors.SimpleButton btnBack;
     }
 }

@@ -8,7 +8,7 @@ namespace SmartExam
 {
     public interface ISinav
     {
-        void SinavBilgileriniGetir(Sinav sinav);
-        void SinavCozulenKaydet(Sinav sinav, int Dogru, int Yanlis, int Bos);
+        void SinavBilgileriniGetir(Sinav sinav, int ogrID);
+        void CozulenSinavKaydet(Sinav sinav, int Dogru, int Yanlis, int Bos, int OgrenciID);
     }
 }

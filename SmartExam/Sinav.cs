@@ -14,15 +14,8 @@ namespace SmartExam
         public int Sinif { get; set; }
         public string DersAD { get; set; }
         public int DersID { get; set; }
+
         public List<Sinav> Sinavlar = new List<Sinav>();
         public SinavDetay sinavDet = new SinavDetay();
-        sqlBaglanti connect = new sqlBaglanti();
-        public void sinavagir()
-        {
-
-        }
-
-    
-
     }
 }

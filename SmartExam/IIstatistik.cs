@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SmartExam
 {
-    public interface ISoruIslemleri
+    interface IIstatistik
     {
-        void TumSorulariGetir();
+        void IstatistikGetir(Istatistik Istatistik, int DersID, int OgrenciID);
     }
 }

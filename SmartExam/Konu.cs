@@ -7,20 +7,23 @@ using System.Data.SqlClient;
 
 namespace SmartExam
 {
-    public class Ders
+    public class Konu
     {
-        public int DersID { get; set; }
+        public int KonuID { get; set; }
         public string DersAD { get; set; }
+        public string KonuAD { get; set; }
 
-        public List<Ders> Dersler = new List<Ders>();
+        public List<Konu> Konular = new List<Konu>();
+        public List<Konu> DersKonusu = new List<Konu>();
 
         sqlBaglanti connect = new sqlBaglanti();
 
-         // Tüm Kayıtlı Dersleri Getir
+        // Tüm Kayıtlı Konuları Getir 
 
-        public void TumDersler() 
+        public void TumKonular()
         {
 
         }
+
     }
 }

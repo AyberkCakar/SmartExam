@@ -12,10 +12,13 @@ namespace SmartExam
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string TC { get; set; }
-        public string Cinsiyet { get; set; }
+        public bool Cinsiyet { get; set; }
         public DateTime DogumTarihi { get; set; }
         public string Resim { get; set; }
         public string KullanıcıID { get; set; }
         public string Sifre { get; set; }
+        public abstract void KisiEkle();
+        public abstract void KisiBilgiGetir(string kullaniciAdi);
+        public abstract void KisiBilgiGuncelle(int DersID);
     }
 }
