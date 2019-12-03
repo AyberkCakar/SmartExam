@@ -65,7 +65,45 @@ namespace SmartExam
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-           
+            // Öğrenci Girişi Kontrolleri
+
+            if (rdbOgrenci.Checked == true)
+            {
+                GirisServisi giris = new GirisServisi();
+                if (giris.GirisYapOgrenci(txtKullaniciID.Text.ToLower(), txtSifre.Text) != null)
+                {
+                    OgrenciScreen ogr = new OgrenciScreen();
+                    ogr.kullanici = txtKullaniciID.Text.ToLower();
+                    ogr.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Hatalı Öğrenci Bilgisi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+            // Öğretmen Girişi Kontrolleri
+
+            else if (rdbOgretmen.Checked == true)
+            {
+                GirisServisi giris = new GirisServisi();
+                if (giris.GirisYapOgretmen(txtKullaniciID.Text.ToLower(), txtSifre.Text) != null)
+                {
+                    OgretmenScreen ogrt = new OgretmenScreen();
+                    ogrt.kullanici = txtKullaniciID.Text.ToLower();
+                    ogrt.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Hatalı Öğretmen Bilgisi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Giriş Türü Seçiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
         }
     }
 }

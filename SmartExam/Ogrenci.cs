@@ -122,24 +122,53 @@ namespace SmartExam
 
         public override void KisiEkle()
         {
-            throw new NotImplementedException();
+            SqlCommand ogrEkle = new SqlCommand("insert into Tbl_Ogrenci (OgrAD,OgrSoyad,OgrTC,OgrCinsiyet,OgrDogumTarihi,KullaniciAdi,Sifre) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", connect.baglanti());
+            ogrEkle.Parameters.AddWithValue("@p1", Ad);
+            ogrEkle.Parameters.AddWithValue("@p2", Soyad);
+            ogrEkle.Parameters.AddWithValue("@p3", TC);
+            ogrEkle.Parameters.AddWithValue("@p4", Cinsiyet);
+            ogrEkle.Parameters.AddWithValue("@p5", DogumTarihi);
+            ogrEkle.Parameters.AddWithValue("@p6", KullanıcıID);
+            ogrEkle.Parameters.AddWithValue("@p7", Sifre);
+            ogrEkle.ExecuteNonQuery();
+            connect.baglanti().Close();
         }
 
         // Öğrenci Bilgilerini Getir
 
         public override void KisiBilgiGetir(string kullaniciAdi)
         {
-            throw new NotImplementedException();
+            SqlCommand OgrenciBilgiGetir = new SqlCommand("Select * From Tbl_Ogrenci where KullaniciAdi=@p1", connect.baglanti());
+            OgrenciBilgiGetir.Parameters.AddWithValue("@p1", kullaniciAdi);
+            SqlDataReader dr = OgrenciBilgiGetir.ExecuteReader();
+            if (dr.Read())
+            {
+                ID = Convert.ToInt32(dr[0]);
+                Ad = dr[1].ToString();
+                Soyad = dr[2].ToString();
+                TC = dr[3].ToString();
+                Cinsiyet = Convert.ToBoolean(dr[4]);
+                DogumTarihi = Convert.ToDateTime(dr[5]);
+                Resim = dr[6].ToString();
+                KullanıcıID = dr[7].ToString();
+                Sifre = dr[8].ToString();
+            }
+            connect.baglanti().Close();
         }
 
         // Öğrenci Bilgileri Güncelle
 
         public override void KisiBilgiGuncelle(int DersID)
         {
-            throw new NotImplementedException();
+            SqlCommand OgrBilgiGuncelle = new SqlCommand("update Tbl_Ogrenci set Sifre =@a2, OgrResim = @a3 where OgrenciID = @a1", connect.baglanti());
+            OgrBilgiGuncelle.Parameters.AddWithValue("@a1", ID);
+            OgrBilgiGuncelle.Parameters.AddWithValue("@a2", Sifre);
+            OgrBilgiGuncelle.Parameters.AddWithValue("a3", Resim);
+            OgrBilgiGuncelle.ExecuteNonQuery();
+            connect.baglanti().Close();
         }
 
-
+        
         //
         // İstatistik İşlemleri
         //
