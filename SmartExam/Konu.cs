@@ -22,7 +22,17 @@ namespace SmartExam
 
         public void TumKonular()
         {
-
+            SqlCommand konuGetir = new SqlCommand("select KonuID,KonuAD,De.DersAD from Tbl_Konu Ko inner join Tbl_Ders De on De.DersID = Ko.DersID", connect.baglanti());
+            SqlDataReader Dtr = konuGetir.ExecuteReader();
+            while (Dtr.Read())
+            {
+                Konu konu = new Konu();
+                konu.KonuID = Convert.ToInt32(Dtr[0]);
+                konu.KonuAD = Dtr[1].ToString();
+                konu.DersAD = Dtr[2].ToString();
+                Konular.Add(konu);
+            }
+            connect.baglanti().Close();
         }
 
     }
