@@ -28,17 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgretmenScreen));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.picOgrProfil = new System.Windows.Forms.PictureBox();
-            this.lblBrans = new System.Windows.Forms.Label();
             this.lblSoyad = new System.Windows.Forms.Label();
             this.lblAd = new System.Windows.Forms.Label();
             this.btnCikis = new System.Windows.Forms.Button();
             this.btnBilgilerim = new System.Windows.Forms.Button();
-            this.btnDersKonu = new System.Windows.Forms.Button();
             this.btnSoru = new System.Windows.Forms.Button();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
@@ -55,8 +53,6 @@
             this.rchC = new System.Windows.Forms.RichTextBox();
             this.rchB = new System.Windows.Forms.RichTextBox();
             this.rchA = new System.Windows.Forms.RichTextBox();
-            this.cmbSoruSınıf = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.label22 = new System.Windows.Forms.Label();
             this.txtSoruResim = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.rchSoru = new System.Windows.Forms.RichTextBox();
@@ -77,35 +73,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnKonuGuncelle = new System.Windows.Forms.Button();
-            this.btnKonuTemizle = new System.Windows.Forms.Button();
-            this.btnKomuEkle = new System.Windows.Forms.Button();
-            this.txtKonu = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtKonuNo = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.gridKonu = new DevExpress.XtraGrid.GridControl();
-            this.gridKonuView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.cmbKonuDers = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.label24 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnDersGuncelle = new System.Windows.Forms.Button();
-            this.btnDersTemizle = new System.Windows.Forms.Button();
-            this.txtDersNo = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtDersAd = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.btnDersEkle = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.gridDers = new DevExpress.XtraGrid.GridControl();
-            this.gridDersView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.button5 = new System.Windows.Forms.Button();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.txtOgretmenID = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.cmbBrans = new DevExpress.XtraEditors.ComboBoxEdit();
             this.btnOgrtResim = new System.Windows.Forms.Button();
             this.mskTelefon = new System.Windows.Forms.MaskedTextBox();
             this.txtResim = new System.Windows.Forms.TextBox();
@@ -113,7 +83,6 @@
             this.picUpdateResim = new System.Windows.Forms.PictureBox();
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnOgretmenGuncelle = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -139,19 +108,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridSoruView1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCevap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSoruSınıf.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSoruKonu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSoruDers.Properties)).BeginInit();
-            this.xtraTabPage3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridKonu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridKonuView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbKonuDers.Properties)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDersView2)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbBrans.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUpdateResim)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,11 +118,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label50);
             this.panel1.Controls.Add(this.picOgrProfil);
-            this.panel1.Controls.Add(this.lblBrans);
             this.panel1.Controls.Add(this.lblSoyad);
             this.panel1.Controls.Add(this.lblAd);
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -172,25 +129,13 @@
             this.panel1.Size = new System.Drawing.Size(263, 434);
             this.panel1.TabIndex = 129;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(10, 337);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 21);
-            this.label5.TabIndex = 124;
-            this.label5.Text = "Branş:";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 300);
+            this.label9.Location = new System.Drawing.Point(8, 333);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 21);
             this.label9.TabIndex = 125;
@@ -202,7 +147,7 @@
             this.label50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.label50.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label50.ForeColor = System.Drawing.Color.White;
-            this.label50.Location = new System.Drawing.Point(27, 265);
+            this.label50.Location = new System.Drawing.Point(32, 298);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(38, 21);
             this.label50.TabIndex = 123;
@@ -210,7 +155,7 @@
             // 
             // picOgrProfil
             // 
-            this.picOgrProfil.Image = global::SmartExam.Properties.Resources.teacher;
+            this.picOgrProfil.Image = ((System.Drawing.Image)(resources.GetObject("picOgrProfil.Image")));
             this.picOgrProfil.Location = new System.Drawing.Point(30, 35);
             this.picOgrProfil.Name = "picOgrProfil";
             this.picOgrProfil.Size = new System.Drawing.Size(201, 196);
@@ -218,25 +163,13 @@
             this.picOgrProfil.TabIndex = 122;
             this.picOgrProfil.TabStop = false;
             // 
-            // lblBrans
-            // 
-            this.lblBrans.AutoSize = true;
-            this.lblBrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.lblBrans.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBrans.ForeColor = System.Drawing.Color.White;
-            this.lblBrans.Location = new System.Drawing.Point(71, 337);
-            this.lblBrans.Name = "lblBrans";
-            this.lblBrans.Size = new System.Drawing.Size(55, 21);
-            this.lblBrans.TabIndex = 120;
-            this.lblBrans.Text = "Brans:";
-            // 
             // lblSoyad
             // 
             this.lblSoyad.AutoSize = true;
             this.lblSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.lblSoyad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSoyad.ForeColor = System.Drawing.Color.White;
-            this.lblSoyad.Location = new System.Drawing.Point(71, 299);
+            this.lblSoyad.Location = new System.Drawing.Point(76, 332);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(62, 21);
             this.lblSoyad.TabIndex = 120;
@@ -248,7 +181,7 @@
             this.lblAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.lblAd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAd.ForeColor = System.Drawing.Color.White;
-            this.lblAd.Location = new System.Drawing.Point(71, 264);
+            this.lblAd.Location = new System.Drawing.Point(76, 297);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(38, 21);
             this.lblAd.TabIndex = 118;
@@ -261,15 +194,16 @@
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCikis.ForeColor = System.Drawing.Color.White;
-            this.btnCikis.Image = global::SmartExam.Properties.Resources.exit50;
+            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
             this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCikis.Location = new System.Drawing.Point(0, 684);
+            this.btnCikis.Location = new System.Drawing.Point(0, 655);
             this.btnCikis.Margin = new System.Windows.Forms.Padding(4);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(264, 80);
+            this.btnCikis.Size = new System.Drawing.Size(264, 106);
             this.btnCikis.TabIndex = 130;
             this.btnCikis.Text = "Çıkış";
             this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // btnBilgilerim
             // 
@@ -278,32 +212,16 @@
             this.btnBilgilerim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBilgilerim.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBilgilerim.ForeColor = System.Drawing.Color.White;
-            this.btnBilgilerim.Image = global::SmartExam.Properties.Resources.account50;
+            this.btnBilgilerim.Image = ((System.Drawing.Image)(resources.GetObject("btnBilgilerim.Image")));
             this.btnBilgilerim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBilgilerim.Location = new System.Drawing.Point(1, 605);
+            this.btnBilgilerim.Location = new System.Drawing.Point(1, 547);
             this.btnBilgilerim.Margin = new System.Windows.Forms.Padding(4);
             this.btnBilgilerim.Name = "btnBilgilerim";
-            this.btnBilgilerim.Size = new System.Drawing.Size(264, 80);
+            this.btnBilgilerim.Size = new System.Drawing.Size(264, 106);
             this.btnBilgilerim.TabIndex = 128;
             this.btnBilgilerim.Text = "Bilgilerim";
             this.btnBilgilerim.UseVisualStyleBackColor = false;
-            // 
-            // btnDersKonu
-            // 
-            this.btnDersKonu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.btnDersKonu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDersKonu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDersKonu.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDersKonu.ForeColor = System.Drawing.Color.White;
-            this.btnDersKonu.Image = global::SmartExam.Properties.Resources.lesson_1_55;
-            this.btnDersKonu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDersKonu.Location = new System.Drawing.Point(1, 524);
-            this.btnDersKonu.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDersKonu.Name = "btnDersKonu";
-            this.btnDersKonu.Size = new System.Drawing.Size(264, 82);
-            this.btnDersKonu.TabIndex = 127;
-            this.btnDersKonu.Text = "Ders / Konu";
-            this.btnDersKonu.UseVisualStyleBackColor = false;
+            this.btnBilgilerim.Click += new System.EventHandler(this.btnBilgilerim_Click);
             // 
             // btnSoru
             // 
@@ -314,15 +232,16 @@
             this.btnSoru.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSoru.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSoru.ForeColor = System.Drawing.Color.White;
-            this.btnSoru.Image = global::SmartExam.Properties.Resources.test__1_50;
+            this.btnSoru.Image = ((System.Drawing.Image)(resources.GetObject("btnSoru.Image")));
             this.btnSoru.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSoru.Location = new System.Drawing.Point(1, 443);
+            this.btnSoru.Location = new System.Drawing.Point(1, 439);
             this.btnSoru.Margin = new System.Windows.Forms.Padding(4);
             this.btnSoru.Name = "btnSoru";
-            this.btnSoru.Size = new System.Drawing.Size(264, 82);
+            this.btnSoru.Size = new System.Drawing.Size(264, 106);
             this.btnSoru.TabIndex = 126;
             this.btnSoru.Text = "Soru";
             this.btnSoru.UseVisualStyleBackColor = false;
+            this.btnSoru.Click += new System.EventHandler(this.btnSoru_Click);
             // 
             // xtraTabControl1
             // 
@@ -375,6 +294,7 @@
             this.gridSoruView1.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
             this.gridSoruView1.OptionsSelection.UseIndicatorForSelection = false;
             this.gridSoruView1.OptionsView.ShowGroupPanel = false;
+            this.gridSoruView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridSoruView1_FocusedRowChanged);
             // 
             // button4
             // 
@@ -386,7 +306,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::SmartExam.Properties.Resources.question60;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(356, 4);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
@@ -409,8 +329,6 @@
             this.panel2.Controls.Add(this.rchC);
             this.panel2.Controls.Add(this.rchB);
             this.panel2.Controls.Add(this.rchA);
-            this.panel2.Controls.Add(this.cmbSoruSınıf);
-            this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.txtSoruResim);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.rchSoru);
@@ -452,6 +370,7 @@
             "C",
             "D",
             "E"});
+            this.cmbCevap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbCevap.Size = new System.Drawing.Size(78, 26);
             this.cmbCevap.TabIndex = 7;
             // 
@@ -474,7 +393,7 @@
             this.btnSoruTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSoruTemizle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSoruTemizle.ForeColor = System.Drawing.Color.Black;
-            this.btnSoruTemizle.Image = global::SmartExam.Properties.Resources.clean30;
+            this.btnSoruTemizle.Image = ((System.Drawing.Image)(resources.GetObject("btnSoruTemizle.Image")));
             this.btnSoruTemizle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSoruTemizle.Location = new System.Drawing.Point(805, 331);
             this.btnSoruTemizle.Margin = new System.Windows.Forms.Padding(4);
@@ -483,6 +402,7 @@
             this.btnSoruTemizle.TabIndex = 15;
             this.btnSoruTemizle.Text = "Temizle";
             this.btnSoruTemizle.UseVisualStyleBackColor = false;
+            this.btnSoruTemizle.Click += new System.EventHandler(this.btnSoruTemizle_Click);
             // 
             // btnSoruResim
             // 
@@ -501,6 +421,7 @@
             this.btnSoruResim.TabIndex = 8;
             this.btnSoruResim.Text = "...";
             this.btnSoruResim.UseVisualStyleBackColor = true;
+            this.btnSoruResim.Click += new System.EventHandler(this.btnSoruResim_Click);
             // 
             // rchE
             // 
@@ -547,37 +468,6 @@
             this.rchA.TabIndex = 2;
             this.rchA.Text = "";
             // 
-            // cmbSoruSınıf
-            // 
-            this.cmbSoruSınıf.Location = new System.Drawing.Point(715, 186);
-            this.cmbSoruSınıf.Name = "cmbSoruSınıf";
-            this.cmbSoruSınıf.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.cmbSoruSınıf.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cmbSoruSınıf.Properties.Appearance.Options.UseFont = true;
-            this.cmbSoruSınıf.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbSoruSınıf.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.cmbSoruSınıf.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbSoruSınıf.Properties.Items.AddRange(new object[] {
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cmbSoruSınıf.Size = new System.Drawing.Size(189, 26);
-            this.cmbSoruSınıf.TabIndex = 11;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(660, 187);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(48, 22);
-            this.label22.TabIndex = 162;
-            this.label22.Text = "Sınıf:";
-            // 
             // txtSoruResim
             // 
             this.txtSoruResim.BackColor = System.Drawing.Color.White;
@@ -619,7 +509,7 @@
             this.btnSoruGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSoruGuncelle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSoruGuncelle.ForeColor = System.Drawing.Color.Black;
-            this.btnSoruGuncelle.Image = global::SmartExam.Properties.Resources.update_1_30;
+            this.btnSoruGuncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnSoruGuncelle.Image")));
             this.btnSoruGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSoruGuncelle.Location = new System.Drawing.Point(317, 331);
             this.btnSoruGuncelle.Margin = new System.Windows.Forms.Padding(4);
@@ -628,6 +518,7 @@
             this.btnSoruGuncelle.TabIndex = 13;
             this.btnSoruGuncelle.Text = "Güncelle";
             this.btnSoruGuncelle.UseVisualStyleBackColor = false;
+            this.btnSoruGuncelle.Click += new System.EventHandler(this.btnSoruGuncelle_Click);
             // 
             // btnSoruSil
             // 
@@ -636,7 +527,7 @@
             this.btnSoruSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSoruSil.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSoruSil.ForeColor = System.Drawing.Color.Black;
-            this.btnSoruSil.Image = global::SmartExam.Properties.Resources.cancel30;
+            this.btnSoruSil.Image = ((System.Drawing.Image)(resources.GetObject("btnSoruSil.Image")));
             this.btnSoruSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSoruSil.Location = new System.Drawing.Point(561, 331);
             this.btnSoruSil.Margin = new System.Windows.Forms.Padding(4);
@@ -645,6 +536,7 @@
             this.btnSoruSil.TabIndex = 14;
             this.btnSoruSil.Text = "Sil";
             this.btnSoruSil.UseVisualStyleBackColor = false;
+            this.btnSoruSil.Click += new System.EventHandler(this.btnSoruSil_Click);
             // 
             // cmbSoruKonu
             // 
@@ -657,6 +549,13 @@
             this.cmbSoruKonu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.cmbSoruKonu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbSoruKonu.Properties.Items.AddRange(new object[] {
+            "Temel İşlemler",
+            "Çarpanlar ve Katlar",
+            "Üslü İfadeler",
+            "Karekök",
+            "Olasılık"});
+            this.cmbSoruKonu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbSoruKonu.Size = new System.Drawing.Size(189, 26);
             this.cmbSoruKonu.TabIndex = 10;
             // 
@@ -671,6 +570,9 @@
             this.cmbSoruDers.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.cmbSoruDers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbSoruDers.Properties.Items.AddRange(new object[] {
+            "Matematik"});
+            this.cmbSoruDers.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbSoruDers.Size = new System.Drawing.Size(189, 26);
             this.cmbSoruDers.TabIndex = 9;
             // 
@@ -729,7 +631,7 @@
             this.btnSoruEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSoruEkle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSoruEkle.ForeColor = System.Drawing.Color.Black;
-            this.btnSoruEkle.Image = global::SmartExam.Properties.Resources.add__1_30;
+            this.btnSoruEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnSoruEkle.Image")));
             this.btnSoruEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSoruEkle.Location = new System.Drawing.Point(73, 331);
             this.btnSoruEkle.Margin = new System.Windows.Forms.Padding(4);
@@ -738,6 +640,7 @@
             this.btnSoruEkle.TabIndex = 12;
             this.btnSoruEkle.Text = "Ekle";
             this.btnSoruEkle.UseVisualStyleBackColor = false;
+            this.btnSoruEkle.Click += new System.EventHandler(this.btnSoruEkle_Click);
             // 
             // button1
             // 
@@ -749,7 +652,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::SmartExam.Properties.Resources.exam__2_50;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(364, 4);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
@@ -835,393 +738,14 @@
             // 
             // xtraTabPage3
             // 
-            this.xtraTabPage3.Controls.Add(this.panel4);
-            this.xtraTabPage3.Controls.Add(this.panel3);
-            this.xtraTabPage3.Controls.Add(this.button5);
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1090, 759);
             this.xtraTabPage3.Text = "xtraTabPage3";
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.btnKonuGuncelle);
-            this.panel4.Controls.Add(this.btnKonuTemizle);
-            this.panel4.Controls.Add(this.btnKomuEkle);
-            this.panel4.Controls.Add(this.txtKonu);
-            this.panel4.Controls.Add(this.label27);
-            this.panel4.Controls.Add(this.txtKonuNo);
-            this.panel4.Controls.Add(this.label26);
-            this.panel4.Controls.Add(this.button7);
-            this.panel4.Controls.Add(this.gridKonu);
-            this.panel4.Controls.Add(this.cmbKonuDers);
-            this.panel4.Controls.Add(this.label24);
-            this.panel4.Location = new System.Drawing.Point(547, 91);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(540, 665);
-            this.panel4.TabIndex = 148;
-            // 
-            // btnKonuGuncelle
-            // 
-            this.btnKonuGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnKonuGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnKonuGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKonuGuncelle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKonuGuncelle.ForeColor = System.Drawing.Color.Black;
-            this.btnKonuGuncelle.Image = global::SmartExam.Properties.Resources.update_1_30;
-            this.btnKonuGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKonuGuncelle.Location = new System.Drawing.Point(177, 602);
-            this.btnKonuGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKonuGuncelle.Name = "btnKonuGuncelle";
-            this.btnKonuGuncelle.Size = new System.Drawing.Size(180, 42);
-            this.btnKonuGuncelle.TabIndex = 177;
-            this.btnKonuGuncelle.Text = "Güncelle";
-            this.btnKonuGuncelle.UseVisualStyleBackColor = false;
-            // 
-            // btnKonuTemizle
-            // 
-            this.btnKonuTemizle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnKonuTemizle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnKonuTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKonuTemizle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKonuTemizle.ForeColor = System.Drawing.Color.Black;
-            this.btnKonuTemizle.Image = global::SmartExam.Properties.Resources.clean30;
-            this.btnKonuTemizle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKonuTemizle.Location = new System.Drawing.Point(363, 602);
-            this.btnKonuTemizle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKonuTemizle.Name = "btnKonuTemizle";
-            this.btnKonuTemizle.Size = new System.Drawing.Size(158, 42);
-            this.btnKonuTemizle.TabIndex = 174;
-            this.btnKonuTemizle.Text = "Temizle";
-            this.btnKonuTemizle.UseVisualStyleBackColor = false;
-            // 
-            // btnKomuEkle
-            // 
-            this.btnKomuEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnKomuEkle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnKomuEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKomuEkle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKomuEkle.ForeColor = System.Drawing.Color.Black;
-            this.btnKomuEkle.Image = global::SmartExam.Properties.Resources.add__1_30;
-            this.btnKomuEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKomuEkle.Location = new System.Drawing.Point(11, 602);
-            this.btnKomuEkle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKomuEkle.Name = "btnKomuEkle";
-            this.btnKomuEkle.Size = new System.Drawing.Size(158, 42);
-            this.btnKomuEkle.TabIndex = 177;
-            this.btnKomuEkle.Text = "Ekle";
-            this.btnKomuEkle.UseVisualStyleBackColor = false;
-            // 
-            // txtKonu
-            // 
-            this.txtKonu.BackColor = System.Drawing.Color.White;
-            this.txtKonu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKonu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKonu.ForeColor = System.Drawing.Color.Black;
-            this.txtKonu.Location = new System.Drawing.Point(115, 532);
-            this.txtKonu.Multiline = true;
-            this.txtKonu.Name = "txtKonu";
-            this.txtKonu.Size = new System.Drawing.Size(309, 29);
-            this.txtKonu.TabIndex = 174;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label27.ForeColor = System.Drawing.Color.Black;
-            this.label27.Location = new System.Drawing.Point(47, 539);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(62, 22);
-            this.label27.TabIndex = 176;
-            this.label27.Text = "Konu:";
-            // 
-            // txtKonuNo
-            // 
-            this.txtKonuNo.BackColor = System.Drawing.Color.White;
-            this.txtKonuNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKonuNo.Enabled = false;
-            this.txtKonuNo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKonuNo.ForeColor = System.Drawing.Color.Black;
-            this.txtKonuNo.Location = new System.Drawing.Point(115, 451);
-            this.txtKonuNo.Multiline = true;
-            this.txtKonuNo.Name = "txtKonuNo";
-            this.txtKonuNo.Size = new System.Drawing.Size(107, 29);
-            this.txtKonuNo.TabIndex = 175;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(16, 451);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(93, 22);
-            this.label26.TabIndex = 174;
-            this.label26.Text = "Konu No:";
-            // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Image = global::SmartExam.Properties.Resources.subject50;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(122, 4);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(303, 57);
-            this.button7.TabIndex = 149;
-            this.button7.Text = "Konu Bilgileri";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // gridKonu
-            // 
-            this.gridKonu.Location = new System.Drawing.Point(3, 86);
-            this.gridKonu.MainView = this.gridKonuView3;
-            this.gridKonu.Name = "gridKonu";
-            this.gridKonu.Size = new System.Drawing.Size(532, 322);
-            this.gridKonu.TabIndex = 147;
-            this.gridKonu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridKonuView3});
-            // 
-            // gridKonuView3
-            // 
-            this.gridKonuView3.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridKonuView3.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(197)))));
-            this.gridKonuView3.Appearance.Row.Options.UseBackColor = true;
-            this.gridKonuView3.GridControl = this.gridKonu;
-            this.gridKonuView3.Name = "gridKonuView3";
-            this.gridKonuView3.OptionsBehavior.Editable = false;
-            this.gridKonuView3.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridKonuView3.OptionsSelection.EnableAppearanceFocusedRow = false;
-            this.gridKonuView3.OptionsSelection.EnableAppearanceHideSelection = false;
-            this.gridKonuView3.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
-            this.gridKonuView3.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.False;
-            this.gridKonuView3.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
-            this.gridKonuView3.OptionsSelection.UseIndicatorForSelection = false;
-            this.gridKonuView3.OptionsView.ShowGroupPanel = false;
-            // 
-            // cmbKonuDers
-            // 
-            this.cmbKonuDers.Location = new System.Drawing.Point(115, 494);
-            this.cmbKonuDers.Name = "cmbKonuDers";
-            this.cmbKonuDers.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.cmbKonuDers.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cmbKonuDers.Properties.Appearance.Options.UseFont = true;
-            this.cmbKonuDers.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbKonuDers.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.cmbKonuDers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbKonuDers.Size = new System.Drawing.Size(181, 26);
-            this.cmbKonuDers.TabIndex = 166;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(55, 495);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(54, 22);
-            this.label24.TabIndex = 165;
-            this.label24.Text = "Ders:";
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btnDersGuncelle);
-            this.panel3.Controls.Add(this.btnDersTemizle);
-            this.panel3.Controls.Add(this.txtDersNo);
-            this.panel3.Controls.Add(this.label25);
-            this.panel3.Controls.Add(this.txtDersAd);
-            this.panel3.Controls.Add(this.label23);
-            this.panel3.Controls.Add(this.btnDersEkle);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.gridDers);
-            this.panel3.Location = new System.Drawing.Point(3, 91);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(540, 665);
-            this.panel3.TabIndex = 147;
-            // 
-            // btnDersGuncelle
-            // 
-            this.btnDersGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDersGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDersGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDersGuncelle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDersGuncelle.ForeColor = System.Drawing.Color.Black;
-            this.btnDersGuncelle.Image = global::SmartExam.Properties.Resources.update_1_30;
-            this.btnDersGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDersGuncelle.Location = new System.Drawing.Point(174, 602);
-            this.btnDersGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDersGuncelle.Name = "btnDersGuncelle";
-            this.btnDersGuncelle.Size = new System.Drawing.Size(180, 42);
-            this.btnDersGuncelle.TabIndex = 176;
-            this.btnDersGuncelle.Text = "Güncelle";
-            this.btnDersGuncelle.UseVisualStyleBackColor = false;
-            // 
-            // btnDersTemizle
-            // 
-            this.btnDersTemizle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDersTemizle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDersTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDersTemizle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDersTemizle.ForeColor = System.Drawing.Color.Black;
-            this.btnDersTemizle.Image = global::SmartExam.Properties.Resources.clean30;
-            this.btnDersTemizle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDersTemizle.Location = new System.Drawing.Point(362, 602);
-            this.btnDersTemizle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDersTemizle.Name = "btnDersTemizle";
-            this.btnDersTemizle.Size = new System.Drawing.Size(158, 42);
-            this.btnDersTemizle.TabIndex = 175;
-            this.btnDersTemizle.Text = "Temizle";
-            this.btnDersTemizle.UseVisualStyleBackColor = false;
-            // 
-            // txtDersNo
-            // 
-            this.txtDersNo.BackColor = System.Drawing.Color.White;
-            this.txtDersNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDersNo.Enabled = false;
-            this.txtDersNo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtDersNo.ForeColor = System.Drawing.Color.Black;
-            this.txtDersNo.Location = new System.Drawing.Point(98, 451);
-            this.txtDersNo.Multiline = true;
-            this.txtDersNo.Name = "txtDersNo";
-            this.txtDersNo.Size = new System.Drawing.Size(107, 29);
-            this.txtDersNo.TabIndex = 173;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(9, 451);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(85, 22);
-            this.label25.TabIndex = 172;
-            this.label25.Text = "Ders No:";
-            // 
-            // txtDersAd
-            // 
-            this.txtDersAd.BackColor = System.Drawing.Color.White;
-            this.txtDersAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDersAd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtDersAd.ForeColor = System.Drawing.Color.Black;
-            this.txtDersAd.Location = new System.Drawing.Point(98, 492);
-            this.txtDersAd.Multiline = true;
-            this.txtDersAd.Name = "txtDersAd";
-            this.txtDersAd.Size = new System.Drawing.Size(309, 29);
-            this.txtDersAd.TabIndex = 170;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(3, 492);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(91, 22);
-            this.label23.TabIndex = 169;
-            this.label23.Text = "Ders İsmi:";
-            // 
-            // btnDersEkle
-            // 
-            this.btnDersEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDersEkle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDersEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDersEkle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDersEkle.ForeColor = System.Drawing.Color.Black;
-            this.btnDersEkle.Image = global::SmartExam.Properties.Resources.add__1_30;
-            this.btnDersEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDersEkle.Location = new System.Drawing.Point(8, 602);
-            this.btnDersEkle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDersEkle.Name = "btnDersEkle";
-            this.btnDersEkle.Size = new System.Drawing.Size(158, 42);
-            this.btnDersEkle.TabIndex = 163;
-            this.btnDersEkle.Text = "Ekle";
-            this.btnDersEkle.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Image = global::SmartExam.Properties.Resources.lessonInf50;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(119, 4);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(303, 57);
-            this.button6.TabIndex = 148;
-            this.button6.Text = "Ders Bilgileri";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // gridDers
-            // 
-            this.gridDers.Location = new System.Drawing.Point(3, 86);
-            this.gridDers.MainView = this.gridDersView2;
-            this.gridDers.Name = "gridDers";
-            this.gridDers.Size = new System.Drawing.Size(532, 322);
-            this.gridDers.TabIndex = 146;
-            this.gridDers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridDersView2});
-            // 
-            // gridDersView2
-            // 
-            this.gridDersView2.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridDersView2.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(197)))));
-            this.gridDersView2.Appearance.Row.Options.UseBackColor = true;
-            this.gridDersView2.GridControl = this.gridDers;
-            this.gridDersView2.Name = "gridDersView2";
-            this.gridDersView2.OptionsBehavior.Editable = false;
-            this.gridDersView2.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridDersView2.OptionsSelection.EnableAppearanceFocusedRow = false;
-            this.gridDersView2.OptionsSelection.EnableAppearanceHideSelection = false;
-            this.gridDersView2.OptionsSelection.InvertSelection = true;
-            this.gridDersView2.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
-            this.gridDersView2.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.False;
-            this.gridDersView2.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
-            this.gridDersView2.OptionsSelection.UseIndicatorForSelection = false;
-            this.gridDersView2.OptionsView.ShowGroupPanel = false;
-            // 
-            // button5
-            // 
-            this.button5.CausesValidation = false;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Image = global::SmartExam.Properties.Resources.lesson_2_60;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(352, 4);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(352, 80);
-            this.button5.TabIndex = 1441;
-            this.button5.Text = "Ders / Konu";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // xtraTabPage4
             // 
             this.xtraTabPage4.Controls.Add(this.txtOgretmenID);
             this.xtraTabPage4.Controls.Add(this.label29);
-            this.xtraTabPage4.Controls.Add(this.cmbBrans);
             this.xtraTabPage4.Controls.Add(this.btnOgrtResim);
             this.xtraTabPage4.Controls.Add(this.mskTelefon);
             this.xtraTabPage4.Controls.Add(this.txtResim);
@@ -1229,7 +753,6 @@
             this.xtraTabPage4.Controls.Add(this.picUpdateResim);
             this.xtraTabPage4.Controls.Add(this.txtKullaniciAdi);
             this.xtraTabPage4.Controls.Add(this.label4);
-            this.xtraTabPage4.Controls.Add(this.label14);
             this.xtraTabPage4.Controls.Add(this.label11);
             this.xtraTabPage4.Controls.Add(this.btnOgretmenGuncelle);
             this.xtraTabPage4.Controls.Add(this.button11);
@@ -1272,27 +795,6 @@
             this.label29.TabIndex = 1403;
             this.label29.Text = "Öğretmen ID:";
             // 
-            // cmbBrans
-            // 
-            this.cmbBrans.Location = new System.Drawing.Point(752, 443);
-            this.cmbBrans.Name = "cmbBrans";
-            this.cmbBrans.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cmbBrans.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cmbBrans.Properties.Appearance.Options.UseFont = true;
-            this.cmbBrans.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbBrans.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.cmbBrans.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbBrans.Properties.Items.AddRange(new object[] {
-            "Matematik",
-            "Fizik",
-            "Kimya",
-            "Biyoloji",
-            "İngilizce",
-            "Türkçe"});
-            this.cmbBrans.Size = new System.Drawing.Size(229, 28);
-            this.cmbBrans.TabIndex = 1402;
-            // 
             // btnOgrtResim
             // 
             this.btnOgrtResim.FlatAppearance.BorderSize = 0;
@@ -1310,6 +812,7 @@
             this.btnOgrtResim.TabIndex = 170;
             this.btnOgrtResim.Text = "...";
             this.btnOgrtResim.UseVisualStyleBackColor = true;
+            this.btnOgrtResim.Click += new System.EventHandler(this.btnOgrtResim_Click);
             // 
             // mskTelefon
             // 
@@ -1365,7 +868,7 @@
             this.txtKullaniciAdi.Enabled = false;
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(752, 493);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(752, 445);
             this.txtKullaniciAdi.Multiline = true;
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(229, 29);
@@ -1376,22 +879,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(592, 490);
+            this.label4.Location = new System.Drawing.Point(592, 442);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 24);
             this.label4.TabIndex = 146;
             this.label4.Text = "Kullanıcı Adı:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(665, 443);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 24);
-            this.label14.TabIndex = 144;
-            this.label14.Text = "Branş:";
             // 
             // label11
             // 
@@ -1411,7 +903,7 @@
             this.btnOgretmenGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOgretmenGuncelle.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOgretmenGuncelle.ForeColor = System.Drawing.Color.Black;
-            this.btnOgretmenGuncelle.Image = global::SmartExam.Properties.Resources.updated;
+            this.btnOgretmenGuncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnOgretmenGuncelle.Image")));
             this.btnOgretmenGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOgretmenGuncelle.Location = new System.Drawing.Point(374, 634);
             this.btnOgretmenGuncelle.Margin = new System.Windows.Forms.Padding(4);
@@ -1420,6 +912,7 @@
             this.btnOgretmenGuncelle.TabIndex = 141;
             this.btnOgretmenGuncelle.Text = "Güncelle";
             this.btnOgretmenGuncelle.UseVisualStyleBackColor = true;
+            this.btnOgretmenGuncelle.Click += new System.EventHandler(this.btnOgretmenGuncelle_Click);
             // 
             // button11
             // 
@@ -1430,7 +923,7 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Image = global::SmartExam.Properties.Resources.user60;
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.Location = new System.Drawing.Point(319, 4);
             this.button11.Margin = new System.Windows.Forms.Padding(4);
@@ -1449,15 +942,16 @@
             this.btnSifreGoster.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSifreGoster.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSifreGoster.ForeColor = System.Drawing.Color.Black;
-            this.btnSifreGoster.Image = global::SmartExam.Properties.Resources.password;
+            this.btnSifreGoster.Image = ((System.Drawing.Image)(resources.GetObject("btnSifreGoster.Image")));
             this.btnSifreGoster.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSifreGoster.Location = new System.Drawing.Point(752, 571);
+            this.btnSifreGoster.Location = new System.Drawing.Point(752, 523);
             this.btnSifreGoster.Margin = new System.Windows.Forms.Padding(4);
             this.btnSifreGoster.Name = "btnSifreGoster";
             this.btnSifreGoster.Size = new System.Drawing.Size(176, 29);
             this.btnSifreGoster.TabIndex = 139;
             this.btnSifreGoster.Text = "Şifre Göster / Gizle";
             this.btnSifreGoster.UseVisualStyleBackColor = true;
+            this.btnSifreGoster.Click += new System.EventHandler(this.btnSifreGoster_Click);
             // 
             // mskTC
             // 
@@ -1518,7 +1012,7 @@
             this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSifre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSifre.ForeColor = System.Drawing.Color.Black;
-            this.txtSifre.Location = new System.Drawing.Point(752, 538);
+            this.txtSifre.Location = new System.Drawing.Point(752, 490);
             this.txtSifre.Multiline = true;
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
@@ -1552,7 +1046,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(678, 537);
+            this.label16.Location = new System.Drawing.Point(678, 489);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(55, 24);
             this.label16.TabIndex = 130;
@@ -1599,7 +1093,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnBilgilerim);
-            this.Controls.Add(this.btnDersKonu);
             this.Controls.Add(this.btnSoru);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -1607,6 +1100,7 @@
             this.Name = "OgretmenScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OgretmenScreen";
+            this.Load += new System.EventHandler(this.OgretmenScreen_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picOgrProfil)).EndInit();
@@ -1618,22 +1112,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCevap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSoruSınıf.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSoruKonu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSoruDers.Properties)).EndInit();
-            this.xtraTabPage3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridKonu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridKonuView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbKonuDers.Properties)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDersView2)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
             this.xtraTabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbBrans.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUpdateResim)).EndInit();
             this.ResumeLayout(false);
 
@@ -1642,42 +1124,23 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.PictureBox picOgrProfil;
-        private System.Windows.Forms.Label lblBrans;
         private System.Windows.Forms.Label lblSoyad;
         private System.Windows.Forms.Label lblAd;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Button btnBilgilerim;
-        private System.Windows.Forms.Button btnDersKonu;
         private System.Windows.Forms.Button btnSoru;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraGrid.GridControl gridSoru;
         private DevExpress.XtraGrid.Views.Grid.GridView gridSoruView1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbSoruKonu;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbSoruDers;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSoruEkle;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtSoruNo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnOgretmenGuncelle;
         private System.Windows.Forms.Button button11;
@@ -1692,56 +1155,43 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.PictureBox picUpdateResim;
+        private System.Windows.Forms.TextBox txtResim;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.MaskedTextBox mskTelefon;
+        private System.Windows.Forms.Button btnOgrtResim;
+        private System.Windows.Forms.OpenFileDialog openSoruResim;
+        private System.Windows.Forms.OpenFileDialog openOgretmenResim;
+        private System.Windows.Forms.TextBox txtOgretmenID;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbCevap;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnSoruTemizle;
+        private System.Windows.Forms.Button btnSoruResim;
         private System.Windows.Forms.RichTextBox rchE;
         private System.Windows.Forms.RichTextBox rchD;
         private System.Windows.Forms.RichTextBox rchC;
         private System.Windows.Forms.RichTextBox rchB;
         private System.Windows.Forms.RichTextBox rchA;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtSoruResim;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.RichTextBox rchSoru;
         private System.Windows.Forms.Button btnSoruGuncelle;
         private System.Windows.Forms.Button btnSoruSil;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button7;
-        private DevExpress.XtraGrid.GridControl gridKonu;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridKonuView3;
-        private System.Windows.Forms.Button button6;
-        private DevExpress.XtraGrid.GridControl gridDers;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridDersView2;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbKonuDers;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txtDersAd;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button btnDersEkle;
-        private System.Windows.Forms.Button btnKonuTemizle;
-        private System.Windows.Forms.Button btnKomuEkle;
-        private System.Windows.Forms.TextBox txtKonu;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtKonuNo;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button btnDersTemizle;
-        private System.Windows.Forms.TextBox txtDersNo;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.PictureBox picUpdateResim;
-        private System.Windows.Forms.TextBox txtResim;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.MaskedTextBox mskTelefon;
-        private System.Windows.Forms.Button btnSoruResim;
-        private System.Windows.Forms.Button btnOgrtResim;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbSoruSınıf;
-        private System.Windows.Forms.Button btnSoruTemizle;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbBrans;
-        private System.Windows.Forms.OpenFileDialog openSoruResim;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.OpenFileDialog openOgretmenResim;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbCevap;
-        private System.Windows.Forms.Button btnKonuGuncelle;
-        private System.Windows.Forms.Button btnDersGuncelle;
-        private System.Windows.Forms.TextBox txtOgretmenID;
-        private System.Windows.Forms.Label label29;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbSoruKonu;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbSoruDers;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSoruEkle;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtSoruNo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

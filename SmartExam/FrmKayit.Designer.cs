@@ -80,6 +80,7 @@
             this.txtSifre.Size = new System.Drawing.Size(210, 28);
             this.txtSifre.TabIndex = 7;
             this.txtSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSifre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSifre_KeyPress);
             // 
             // txtKullaniciID
             // 
@@ -94,6 +95,7 @@
             this.txtKullaniciID.Size = new System.Drawing.Size(210, 28);
             this.txtKullaniciID.TabIndex = 6;
             this.txtKullaniciID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKullaniciID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKullaniciID_KeyPress);
             // 
             // txtSoyad
             // 
@@ -108,6 +110,7 @@
             this.txtSoyad.Size = new System.Drawing.Size(210, 28);
             this.txtSoyad.TabIndex = 2;
             this.txtSoyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSoyad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoyad_KeyPress);
             // 
             // txtAd
             // 
@@ -122,6 +125,7 @@
             this.txtAd.Size = new System.Drawing.Size(210, 28);
             this.txtAd.TabIndex = 1;
             this.txtAd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAd_KeyPress);
             // 
             // label8
             // 
@@ -161,11 +165,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Courier New", 14.25F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.label5.Location = new System.Drawing.Point(19, 402);
+            this.label5.Location = new System.Drawing.Point(8, 402);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(153, 21);
+            this.label5.Size = new System.Drawing.Size(164, 21);
             this.label5.TabIndex = 124;
-            this.label5.Text = "Kullanıcı ID:";
+            this.label5.Text = "Kullanıcı Adı:";
             // 
             // label4
             // 
@@ -211,7 +215,6 @@
             this.rdbOgretmen.Name = "rdbOgretmen";
             this.rdbOgretmen.Size = new System.Drawing.Size(116, 25);
             this.rdbOgretmen.TabIndex = 119;
-            this.rdbOgretmen.TabStop = true;
             this.rdbOgretmen.Text = "Öğretmen";
             this.rdbOgretmen.UseVisualStyleBackColor = false;
             this.rdbOgretmen.CheckedChanged += new System.EventHandler(this.rdbOgretmen_CheckedChanged);
@@ -221,6 +224,7 @@
             this.rdbOgrenci.AutoSize = true;
             this.rdbOgrenci.BackColor = System.Drawing.Color.Transparent;
             this.rdbOgrenci.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rdbOgrenci.Checked = true;
             this.rdbOgrenci.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbOgrenci.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
             this.rdbOgrenci.Location = new System.Drawing.Point(130, 146);
@@ -333,6 +337,7 @@
             this.lblTelefon.Size = new System.Drawing.Size(98, 21);
             this.lblTelefon.TabIndex = 141;
             this.lblTelefon.Text = "Telefon:";
+            this.lblTelefon.Visible = false;
             // 
             // mskTelefon
             // 
@@ -345,9 +350,11 @@
             this.mskTelefon.Name = "mskTelefon";
             this.mskTelefon.Size = new System.Drawing.Size(210, 27);
             this.mskTelefon.TabIndex = 8;
+            this.mskTelefon.Visible = false;
             // 
             // FrmKayit
             // 
+            this.AcceptButton = this.btnKaydet;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;

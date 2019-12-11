@@ -39,9 +39,9 @@ namespace SmartExam
 
         private void txtKullaniciID_Click(object sender, EventArgs e)
         {
-            if (txtKullaniciID.Text == "Kullanıcı ID")
+            if (txtKullaniciAdi.Text == "Kullanıcı Adı")
             {
-                txtKullaniciID.Text = "";
+                txtKullaniciAdi.Text = "";
             }
             if (txtSifre.Text == "")
             {
@@ -55,9 +55,27 @@ namespace SmartExam
             {
                 txtSifre.Text = "";
             }
-            if (txtKullaniciID.Text == "")
+            if (txtKullaniciAdi.Text == "")
             {
-                txtKullaniciID.Text = "Kullanıcı ID";
+                txtKullaniciAdi.Text = "Kullanıcı Adı";
+            }
+        }
+
+        // Karakter Girişi Yasaklama
+
+        private void txtKullaniciID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSifre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsSeparator(e.KeyChar) || char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
 
@@ -65,7 +83,43 @@ namespace SmartExam
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-           
+            // Öğrenci Girişi Kontrolleri
+
+            Sifrele sifre = new Sifrele();
+
+            if (rdbOgrenci.Checked == true)
+            {
+                GirisServisi giris = new GirisServisi();
+                if (giris.GirisYapOgrenci(txtKullaniciAdi.Text.ToLower(), sifre.SifreOlustur(txtSifre.Text)) != null)
+                {
+                    OgrenciScreen ogr = new OgrenciScreen();
+                    ogr.kullanici = txtKullaniciAdi.Text.ToLower();
+                    ogr.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Hatalı Öğrenci Bilgisi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            // Öğretmen Girişi Kontrolleri
+            else if (rdbOgretmen.Checked == true)
+            {
+                GirisServisi giris = new GirisServisi();
+                if (giris.GirisYapOgretmen(txtKullaniciAdi.Text.ToLower(), sifre.SifreOlustur(txtSifre.Text)) != null)
+                {
+                    OgretmenScreen ogrt = new OgretmenScreen();
+                    ogrt.kullanici = txtKullaniciAdi.Text.ToLower();
+                    ogrt.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Hatalı Öğretmen Bilgisi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Giriş Türü Seçiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

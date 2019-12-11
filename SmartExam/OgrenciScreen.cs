@@ -24,19 +24,18 @@ namespace SmartExam
 
 
         Sinav sinav = new Sinav();
-        Ogrenci ogr = new Ogrenci();
+        Ogrenci ogrenci = new Ogrenci();
         public string kullanici;
-
+        bool _sinavOldumu;
 
         //
         //  Ana Menü İşlemleri
         //
+
         private void OgrenciScreen_Load(object sender, EventArgs e)
         {
             OgrenciBilgiGetir();
             gridSinavDoldur();
-            comboBoxDersGetir();
-            
         }
 
         private void btnSinavlarim_Click(object sender, EventArgs e)
@@ -74,68 +73,65 @@ namespace SmartExam
 
         void gridSinavDoldur()
         {
-            ogr.SinavBilgileriniGetir(sinav, Convert.ToInt32(txtogrID.Text));
+            ogrenci.SinavBilgileriniGetir(sinav, Convert.ToInt32(txtogrID.Text));
             DataTable tablo = new DataTable();
             tablo.Columns.Add("SinavID", typeof(int));
             tablo.Columns.Add("Ders", typeof(string));
-            tablo.Columns.Add("Sınıf", typeof(int));
             tablo.Columns.Add("Doğru", typeof(int));
             tablo.Columns.Add("Yanlış", typeof(int));
             tablo.Columns.Add("Boş", typeof(int));
             tablo.Columns.Add("Tarih", typeof(DateTime));
             foreach (Sinav sin in sinav.Sinavlar)
             {
-                tablo.Rows.Add(sin.SinavID, sin.DersAD, sin.Sinif, sin.sinavDet.Dogru, sin.sinavDet.Yanliş, sin.sinavDet.Bos, sin.sinavDet.Tarih);
-                gridControl1.DataSource = tablo;
+                tablo.Rows.Add(sin.SinavID, sin.DersAD, sin.sinavDet.Dogru, sin.sinavDet.Yanliş, sin.sinavDet.Bos, sin.sinavDet.Tarih);
+                gridSınav.DataSource = tablo;
+                if(sin.sinavDet.Tarih == DateTime.Today)
+                {
+                    _sinavOldumu = true;
+                }
+                else
+                {
+                    _sinavOldumu = false;
+                }
             }
             sinav.Sinavlar.Clear();
-            gridView1.OptionsBehavior.Editable = false;
+            gridSınavView.OptionsBehavior.Editable = false;
         }
 
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void gridSınavView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            DataRow dataRow = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            DataRow dataRow = gridSınavView.GetDataRow(gridSınavView.FocusedRowHandle);
             txtSinavNo.Text = Convert.ToInt32(dataRow[0]).ToString();
             txtDers.Text = dataRow[1].ToString();
-            txtSinavSinif.Text = Convert.ToInt32(dataRow[2]).ToString();
-            txtSinavDogru.Text = Convert.ToInt32(dataRow[3]).ToString();
-            txtSinavYanlis.Text = Convert.ToInt32(dataRow[4]).ToString();
-            txtBos.Text = Convert.ToInt32(dataRow[5]).ToString();
-            txtTarih.Text = Convert.ToDateTime(dataRow[6]).ToString();
+            txtSinavDogru.Text = Convert.ToInt32(dataRow[2]).ToString();
+            txtSinavYanlis.Text = Convert.ToInt32(dataRow[3]).ToString();
+            txtBos.Text = Convert.ToInt32(dataRow[4]).ToString();
+            txtTarih.Text = Convert.ToDateTime(dataRow[5]).ToString();
         }
-
-        // Öğrenci için Kayıtlı Tüm Dersleri Sınavın Dersi İçin Getir
-
-        void comboBoxDersGetir()
-        {
-            Ders ders = new Ders();
-            ders.TumDersler();
-            foreach (Ders dr in ders.Dersler)
-            {
-                cmbDers.Properties.Items.Add(dr.DersAD);
-                cmbIstatistikDers.Properties.Items.Add(dr.DersAD);
-            }
-            ders.Dersler.Clear();
-        }
-
-        // Ders ve Sınıf Seçtikten Sonra Sınavı Başlat
 
         private void btnSinaviBaslat_Click(object sender, EventArgs e)
         {
-
-            if (cmbDers.SelectedIndex != -1 && cmbSınıf.SelectedIndex != -1)
+            FrmSinav frmSınav = new FrmSinav();
+            frmSınav.dersAd = cmbDers.Text;
+            frmSınav.ders = cmbDers.SelectedIndex + 1;
+            frmSınav.ogrenciID = Convert.ToInt32(txtogrID.Text);    
+            if(_sinavOldumu == false)
             {
-                FrmSinav frmSınav = new FrmSinav();
-                frmSınav.dersAd = cmbDers.Text;
-                frmSınav.ders = cmbDers.SelectedIndex + 1;
-                frmSınav.sinif = Convert.ToInt32(cmbSınıf.Text);
-                frmSınav.ogrenciID = Convert.ToInt32(txtogrID.Text);
-                frmSınav.Show();
+                if (gridSınav.DataSource == null)
+                {
+                    // Bütün Konular
+                    frmSınav.ogrenciDurum = false;
+                    frmSınav.Show();
+                }
+                else
+                {
+                    // Algoritmalı Konular
+                    frmSınav.ogrenciDurum = true;
+                    frmSınav.Show();
+                }
             }
             else
-            {
-                MessageBox.Show("Ders , Soru Sayisi ve Sınıf Seçiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                MessageBox.Show("Bugün Sınav Oldunuz Yarın Tekrar Deneyiniz...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 
@@ -143,10 +139,12 @@ namespace SmartExam
         //  İstatistik İşlemleri
         //
 
-        private void btnGrafikOlustur_Click(object sender, EventArgs e)
+        // Toplam Doğru Yanlış İstatistiği
+
+        private void btnDerslikGrafikOlustur_Click(object sender, EventArgs e)
         {
             Istatistik istatistik = new Istatistik();
-            ogr.IstatistikGetir(istatistik, Convert.ToInt32(cmbIstatistikDers.SelectedIndex + 1), Convert.ToInt32(txtogrID.Text));
+            ogrenci.IstatistikGetir(istatistik, Convert.ToInt32(cmbDerslikIstatistik.SelectedIndex + 1), Convert.ToInt32(txtogrID.Text));
             foreach (Istatistik istatistiks in istatistik.IstatistiklerDogru)
             {
                 chartControl1.Series["Doğru"].Points.AddPoint(istatistiks.Konu, istatistiks.Adet);
@@ -155,9 +153,35 @@ namespace SmartExam
             {
                 chartControl1.Series["Yanlış"].Points.AddPoint(istatistiks.Konu, istatistiks.Adet);
             }
-
         }
 
+        // Sınavlık İstatistik
+
+        private void gridSınav_DoubleClick(object sender, EventArgs e)
+        {
+            FrmIstatistik frmIstatistik = new FrmIstatistik();
+            frmIstatistik.skor = Convert.ToInt32(txtSinavDogru.Text) * 5;
+            frmIstatistik.SinavID = Convert.ToInt32(txtSinavNo.Text);
+            frmIstatistik.ogrenciID = Convert.ToInt32(txtogrID.Text);
+            frmIstatistik.Show();
+        }
+
+        // Tarihsel Puanlı İstatistik
+
+        void TarihselIstatistik()
+        {
+            for (int i = 0; i <= gridSınavView.RowCount - 1; i++)
+            {
+                gridSınavView.FocusedRowHandle = i;
+                DataRow dataRow = gridSınavView.GetDataRow(gridSınavView.FocusedRowHandle);
+                chartControl2.Series["Series 1"].Points.AddPoint(Convert.ToDateTime(dataRow[5]), Convert.ToInt32(dataRow[2]) * 5);
+            }
+        }
+        
+        private void btnPuanlıkGrafikOlustur_Click(object sender, EventArgs e)
+        {
+            TarihselIstatistik();
+        }
 
 
         //
@@ -169,7 +193,6 @@ namespace SmartExam
 
         void OgrenciBilgiGetir()
         {
-            Ogrenci ogrenci = new Ogrenci();
             ogrenci.KisiBilgiGetir(kullanici);
             txtAd.Text = lblAd.Text = ogrenci.Ad;
             txtogrID.Text = ogrenci.ID.ToString();
@@ -193,9 +216,9 @@ namespace SmartExam
 
         void OgrenciBilgiGuncelle()
         {
-            Ogrenci ogrenci = new Ogrenci();
+            Sifrele sifre = new Sifrele();
             ogrenci.ID = Convert.ToInt32(txtogrID.Text);
-            ogrenci.Sifre = txtSifre.Text;
+            ogrenci.Sifre = sifre.SifreOlustur(txtSifre.Text);
             ogrenci.Resim = txtResim.Text;
             ogrenci.KisiBilgiGuncelle(0);
             MessageBox.Show("Öğrenci Bilgileri Güncellendi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);

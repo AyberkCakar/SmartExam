@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace SmartExam
 {
-    class GirisServisi
+    public class GirisServisi
     {
         //
         // Bilgi Doğrulama İşlemleri
@@ -59,28 +59,15 @@ namespace SmartExam
 
         public Kisi GirisYapOgrenci(string kullaniciAdi, string sifre) 
         {
-            if (OgrenciDogrula(kullaniciAdi, sifre))
-            {
-                return new Ogrenci(kullaniciAdi);
-            }
-            else
-            {
-                return null;
-            }
+            return OgrenciDogrula(kullaniciAdi, sifre)==true ? new Ogrenci(kullaniciAdi) : null;
         }
 
         // Öğretmen Giriş Yapma
 
         public Kisi GirisYapOgretmen(string kullaniciAdi, string sifre) 
         {
-            if (OgretmenDogrula(kullaniciAdi, sifre))
-            {
-                return new Ogretmen(kullaniciAdi);
-            }
-            else
-            {
-                return null;
-            }
+            return OgretmenDogrula(kullaniciAdi, sifre) == true ? new Ogretmen(kullaniciAdi) : null;
+
         }
     }
 }

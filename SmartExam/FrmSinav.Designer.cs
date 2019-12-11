@@ -48,6 +48,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
             this.lblSoruNo1 = new DevExpress.XtraEditors.LabelControl();
             this.pnlDogruYanlis = new System.Windows.Forms.Panel();
@@ -61,13 +63,11 @@
             this.btnCikis = new DevExpress.XtraEditors.SimpleButton();
             this.lblSoruID = new DevExpress.XtraEditors.LabelControl();
             this.lblSoruCevap = new DevExpress.XtraEditors.LabelControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.pnlDogruYanlis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.pnlDogruYanlis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -320,6 +320,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblSure);
             this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.gridControl1);
             this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.lblSoruNo1);
@@ -367,6 +368,69 @@
             this.btnBack.TabIndex = 153;
             this.btnBack.Text = "Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridControl1.Location = new System.Drawing.Point(654, 226);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1012, 302);
+            this.gridControl1.TabIndex = 145;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.gridControl1.Visible = false;
+            // 
+            // gridView1
+            // 
+            this.gridView1.ActiveFilterEnabled = false;
+            this.gridView1.Appearance.FilterCloseButton.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.gridView1.Appearance.FilterCloseButton.Options.UseFont = true;
+            this.gridView1.Appearance.FilterPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.gridView1.Appearance.FilterPanel.Options.UseFont = true;
+            this.gridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.gridView1.Appearance.FooterPanel.Options.UseFont = true;
+            this.gridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.gridView1.Appearance.GroupFooter.Options.UseFont = true;
+            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gridView1.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(197)))));
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.Row.Options.UseBackColor = true;
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.AppearancePrint.HeaderPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.AppearancePrint.HeaderPanel.Options.UseFont = true;
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.FocusLeaveOnTab = true;
+            this.gridView1.OptionsBehavior.KeepFocusedRowOnUpdate = false;
+            this.gridView1.OptionsBehavior.KeepGroupExpandedOnSorting = false;
+            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
+            this.gridView1.OptionsCustomization.AllowColumnResizing = false;
+            this.gridView1.OptionsCustomization.AllowFilter = false;
+            this.gridView1.OptionsCustomization.AllowGroup = false;
+            this.gridView1.OptionsCustomization.AllowQuickHideColumns = false;
+            this.gridView1.OptionsCustomization.AllowSort = false;
+            this.gridView1.OptionsDetail.AllowZoomDetail = false;
+            this.gridView1.OptionsDetail.EnableMasterViewMode = false;
+            this.gridView1.OptionsDetail.ShowDetailTabs = false;
+            this.gridView1.OptionsEditForm.ActionOnModifiedRowChange = DevExpress.XtraGrid.Views.Grid.EditFormModifiedAction.Nothing;
+            this.gridView1.OptionsMenu.EnableColumnMenu = false;
+            this.gridView1.OptionsMenu.EnableFooterMenu = false;
+            this.gridView1.OptionsMenu.EnableGroupPanelMenu = false;
+            this.gridView1.OptionsMenu.ShowAddNewSummaryItem = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsMenu.ShowAutoFilterRowItem = false;
+            this.gridView1.OptionsMenu.ShowDateTimeGroupIntervalItems = false;
+            this.gridView1.OptionsMenu.ShowGroupSortSummaryItems = false;
+            this.gridView1.OptionsMenu.ShowSplitItem = false;
+            this.gridView1.OptionsSelection.InvertSelection = true;
+            this.gridView1.OptionsSelection.ResetSelectionClickOutsideCheckboxSelector = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // btnNext
             // 
@@ -547,69 +611,6 @@
             this.lblSoruCevap.Text = "Cevap";
             this.lblSoruCevap.Visible = false;
             // 
-            // gridControl1
-            // 
-            this.gridControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridControl1.Location = new System.Drawing.Point(1317, 350);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1012, 302);
-            this.gridControl1.TabIndex = 145;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.gridControl1.Visible = false;
-            // 
-            // gridView1
-            // 
-            this.gridView1.ActiveFilterEnabled = false;
-            this.gridView1.Appearance.FilterCloseButton.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.gridView1.Appearance.FilterCloseButton.Options.UseFont = true;
-            this.gridView1.Appearance.FilterPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.gridView1.Appearance.FilterPanel.Options.UseFont = true;
-            this.gridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.gridView1.Appearance.FooterPanel.Options.UseFont = true;
-            this.gridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.gridView1.Appearance.GroupFooter.Options.UseFont = true;
-            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridView1.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(197)))));
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridView1.Appearance.Row.Options.UseBackColor = true;
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.AppearancePrint.HeaderPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridView1.AppearancePrint.HeaderPanel.Options.UseFont = true;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsBehavior.FocusLeaveOnTab = true;
-            this.gridView1.OptionsBehavior.KeepFocusedRowOnUpdate = false;
-            this.gridView1.OptionsBehavior.KeepGroupExpandedOnSorting = false;
-            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
-            this.gridView1.OptionsCustomization.AllowColumnResizing = false;
-            this.gridView1.OptionsCustomization.AllowFilter = false;
-            this.gridView1.OptionsCustomization.AllowGroup = false;
-            this.gridView1.OptionsCustomization.AllowQuickHideColumns = false;
-            this.gridView1.OptionsCustomization.AllowSort = false;
-            this.gridView1.OptionsDetail.AllowZoomDetail = false;
-            this.gridView1.OptionsDetail.EnableMasterViewMode = false;
-            this.gridView1.OptionsDetail.ShowDetailTabs = false;
-            this.gridView1.OptionsEditForm.ActionOnModifiedRowChange = DevExpress.XtraGrid.Views.Grid.EditFormModifiedAction.Nothing;
-            this.gridView1.OptionsMenu.EnableColumnMenu = false;
-            this.gridView1.OptionsMenu.EnableFooterMenu = false;
-            this.gridView1.OptionsMenu.EnableGroupPanelMenu = false;
-            this.gridView1.OptionsMenu.ShowAddNewSummaryItem = DevExpress.Utils.DefaultBoolean.False;
-            this.gridView1.OptionsMenu.ShowAutoFilterRowItem = false;
-            this.gridView1.OptionsMenu.ShowDateTimeGroupIntervalItems = false;
-            this.gridView1.OptionsMenu.ShowGroupSortSummaryItems = false;
-            this.gridView1.OptionsMenu.ShowSplitItem = false;
-            this.gridView1.OptionsSelection.InvertSelection = true;
-            this.gridView1.OptionsSelection.ResetSelectionClickOutsideCheckboxSelector = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(476, 7);
@@ -628,7 +629,6 @@
             this.ClientSize = new System.Drawing.Size(1368, 879);
             this.Controls.Add(this.lblDers);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.gridControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -638,10 +638,10 @@
             this.Load += new System.EventHandler(this.FrmSinav_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnlDogruYanlis.ResumeLayout(false);
-            this.pnlDogruYanlis.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.pnlDogruYanlis.ResumeLayout(false);
+            this.pnlDogruYanlis.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgrenciScreen));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+            DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel1 = new DevExpress.XtraCharts.PointSeriesLabel();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView2 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -47,21 +52,17 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridSınav = new DevExpress.XtraGrid.GridControl();
+            this.gridSınavView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cmbSınıf = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbDers = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.btnSinaviBaslat = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTarih = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSinavSinif = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtBos = new System.Windows.Forms.TextBox();
             this.txtDers = new System.Windows.Forms.TextBox();
@@ -74,11 +75,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnGrafikOlustur = new System.Windows.Forms.Button();
-            this.cmbIstatistikDers = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnPuanlıkGrafikOlustur = new System.Windows.Forms.Button();
+            this.cmbPuanlıkIstatistik = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.pnlDerslikIstatistik = new System.Windows.Forms.Panel();
+            this.btnDerslikGrafikOlustur = new System.Windows.Forms.Button();
+            this.cmbDerslikIstatistik = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label11 = new System.Windows.Forms.Label();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.button3 = new System.Windows.Forms.Button();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.txtogrID = new System.Windows.Forms.TextBox();
@@ -106,30 +115,40 @@
             this.label18 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picOgrAnaMenuResim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSınav)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSınavView)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSınıf.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDers.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             this.xtraTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
+            this.xtraTabControl2.SuspendLayout();
+            this.xtraTabPage5.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPuanlıkIstatistik.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
+            this.xtraTabPage6.SuspendLayout();
+            this.pnlDerslikIstatistik.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDerslikIstatistik.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbIstatistikDers.Properties)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picOgrUpdateResim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -156,7 +175,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(2, 334);
+            this.label9.Location = new System.Drawing.Point(6, 334);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 21);
             this.label9.TabIndex = 125;
@@ -168,7 +187,7 @@
             this.label50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.label50.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label50.ForeColor = System.Drawing.Color.White;
-            this.label50.Location = new System.Drawing.Point(26, 299);
+            this.label50.Location = new System.Drawing.Point(30, 299);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(38, 21);
             this.label50.TabIndex = 123;
@@ -190,7 +209,7 @@
             this.lblSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.lblSoyad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSoyad.ForeColor = System.Drawing.Color.White;
-            this.lblSoyad.Location = new System.Drawing.Point(70, 333);
+            this.lblSoyad.Location = new System.Drawing.Point(74, 333);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(62, 21);
             this.lblSoyad.TabIndex = 120;
@@ -202,7 +221,7 @@
             this.lblAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.lblAd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAd.ForeColor = System.Drawing.Color.White;
-            this.lblAd.Location = new System.Drawing.Point(70, 298);
+            this.lblAd.Location = new System.Drawing.Point(74, 298);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(38, 21);
             this.lblAd.TabIndex = 118;
@@ -307,7 +326,7 @@
             // 
             // xtraTabPage2
             // 
-            this.xtraTabPage2.Controls.Add(this.gridControl1);
+            this.xtraTabPage2.Controls.Add(this.gridSınav);
             this.xtraTabPage2.Controls.Add(this.button4);
             this.xtraTabPage2.Controls.Add(this.panel3);
             this.xtraTabPage2.Controls.Add(this.panel2);
@@ -315,34 +334,36 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(1090, 759);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
-            // gridControl1
+            // gridSınav
             // 
-            this.gridControl1.Location = new System.Drawing.Point(5, 100);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1082, 298);
-            this.gridControl1.TabIndex = 144;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridSınav.Location = new System.Drawing.Point(5, 100);
+            this.gridSınav.MainView = this.gridSınavView;
+            this.gridSınav.Name = "gridSınav";
+            this.gridSınav.Size = new System.Drawing.Size(1082, 298);
+            this.gridSınav.TabIndex = 144;
+            this.gridSınav.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridSınavView});
+            this.gridSınav.DoubleClick += new System.EventHandler(this.gridSınav_DoubleClick);
             // 
-            // gridView1
+            // gridSınavView
             // 
-            this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridView1.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(197)))));
-            this.gridView1.Appearance.Row.Options.UseBackColor = true;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView1.OptionsSelection.EnableAppearanceFocusedRow = false;
-            this.gridView1.OptionsSelection.EnableAppearanceHideSelection = false;
-            this.gridView1.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
-            this.gridView1.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.False;
-            this.gridView1.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
-            this.gridView1.OptionsSelection.UseIndicatorForSelection = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            this.gridSınavView.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gridSınavView.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(197)))));
+            this.gridSınavView.Appearance.Row.Options.UseBackColor = true;
+            this.gridSınavView.GridControl = this.gridSınav;
+            this.gridSınavView.Name = "gridSınavView";
+            this.gridSınavView.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridSınavView.OptionsBehavior.Editable = false;
+            this.gridSınavView.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridSınavView.OptionsSelection.EnableAppearanceFocusedRow = false;
+            this.gridSınavView.OptionsSelection.EnableAppearanceHideSelection = false;
+            this.gridSınavView.OptionsSelection.ResetSelectionClickOutsideCheckboxSelector = true;
+            this.gridSınavView.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
+            this.gridSınavView.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.False;
+            this.gridSınavView.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
+            this.gridSınavView.OptionsSelection.UseIndicatorForSelection = false;
+            this.gridSınavView.OptionsView.ShowGroupPanel = false;
+            this.gridSınavView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridSınavView_FocusedRowChanged);
             // 
             // button4
             // 
@@ -366,35 +387,14 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.cmbSınıf);
             this.panel3.Controls.Add(this.cmbDers);
             this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.btnSinaviBaslat);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Location = new System.Drawing.Point(565, 404);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(522, 352);
             this.panel3.TabIndex = 142;
-            // 
-            // cmbSınıf
-            // 
-            this.cmbSınıf.Location = new System.Drawing.Point(199, 171);
-            this.cmbSınıf.Name = "cmbSınıf";
-            this.cmbSınıf.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.cmbSınıf.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cmbSınıf.Properties.Appearance.Options.UseFont = true;
-            this.cmbSınıf.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbSınıf.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.cmbSınıf.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbSınıf.Properties.Items.AddRange(new object[] {
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cmbSınıf.Size = new System.Drawing.Size(155, 26);
-            this.cmbSınıf.TabIndex = 155;
             // 
             // cmbDers
             // 
@@ -407,6 +407,8 @@
             this.cmbDers.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.cmbDers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbDers.Properties.Items.AddRange(new object[] {
+            "Matematik"});
             this.cmbDers.Size = new System.Drawing.Size(155, 26);
             this.cmbDers.TabIndex = 153;
             // 
@@ -421,18 +423,6 @@
             this.label21.Size = new System.Drawing.Size(54, 22);
             this.label21.TabIndex = 152;
             this.label21.Text = "Ders:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(134, 172);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 22);
-            this.label20.TabIndex = 151;
-            this.label20.Text = "Sınıf:";
             // 
             // btnSinaviBaslat
             // 
@@ -475,8 +465,6 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtTarih);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtSinavSinif);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txtBos);
             this.panel2.Controls.Add(this.txtDers);
@@ -500,7 +488,7 @@
             this.txtTarih.Enabled = false;
             this.txtTarih.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTarih.ForeColor = System.Drawing.Color.Black;
-            this.txtTarih.Location = new System.Drawing.Point(377, 94);
+            this.txtTarih.Location = new System.Drawing.Point(147, 220);
             this.txtTarih.Multiline = true;
             this.txtTarih.Name = "txtTarih";
             this.txtTarih.Size = new System.Drawing.Size(110, 29);
@@ -512,36 +500,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(314, 94);
+            this.label3.Location = new System.Drawing.Point(84, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 22);
             this.label3.TabIndex = 154;
             this.label3.Text = "Tarih:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(71, 182);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 22);
-            this.label1.TabIndex = 153;
-            this.label1.Text = "Sınıf:";
-            // 
-            // txtSinavSinif
-            // 
-            this.txtSinavSinif.BackColor = System.Drawing.Color.White;
-            this.txtSinavSinif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSinavSinif.Enabled = false;
-            this.txtSinavSinif.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSinavSinif.ForeColor = System.Drawing.Color.Black;
-            this.txtSinavSinif.Location = new System.Drawing.Point(125, 182);
-            this.txtSinavSinif.Multiline = true;
-            this.txtSinavSinif.Name = "txtSinavSinif";
-            this.txtSinavSinif.Size = new System.Drawing.Size(92, 29);
-            this.txtSinavSinif.TabIndex = 152;
             // 
             // button1
             // 
@@ -569,7 +532,7 @@
             this.txtBos.Enabled = false;
             this.txtBos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBos.ForeColor = System.Drawing.Color.Black;
-            this.txtBos.Location = new System.Drawing.Point(377, 221);
+            this.txtBos.Location = new System.Drawing.Point(394, 218);
             this.txtBos.Multiline = true;
             this.txtBos.Name = "txtBos";
             this.txtBos.Size = new System.Drawing.Size(110, 29);
@@ -582,7 +545,7 @@
             this.txtDers.Enabled = false;
             this.txtDers.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtDers.ForeColor = System.Drawing.Color.Black;
-            this.txtDers.Location = new System.Drawing.Point(125, 138);
+            this.txtDers.Location = new System.Drawing.Point(147, 174);
             this.txtDers.Multiline = true;
             this.txtDers.Name = "txtDers";
             this.txtDers.Size = new System.Drawing.Size(92, 29);
@@ -594,7 +557,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(65, 138);
+            this.label10.Location = new System.Drawing.Point(87, 174);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 22);
             this.label10.TabIndex = 143;
@@ -606,7 +569,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(326, 221);
+            this.label6.Location = new System.Drawing.Point(343, 218);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 22);
             this.label6.TabIndex = 141;
@@ -619,7 +582,7 @@
             this.txtSinavNo.Enabled = false;
             this.txtSinavNo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSinavNo.ForeColor = System.Drawing.Color.Black;
-            this.txtSinavNo.Location = new System.Drawing.Point(125, 94);
+            this.txtSinavNo.Location = new System.Drawing.Point(147, 130);
             this.txtSinavNo.Multiline = true;
             this.txtSinavNo.Name = "txtSinavNo";
             this.txtSinavNo.Size = new System.Drawing.Size(92, 29);
@@ -632,7 +595,7 @@
             this.txtSinavDogru.Enabled = false;
             this.txtSinavDogru.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSinavDogru.ForeColor = System.Drawing.Color.Black;
-            this.txtSinavDogru.Location = new System.Drawing.Point(377, 133);
+            this.txtSinavDogru.Location = new System.Drawing.Point(394, 130);
             this.txtSinavDogru.Multiline = true;
             this.txtSinavDogru.Name = "txtSinavDogru";
             this.txtSinavDogru.Size = new System.Drawing.Size(110, 29);
@@ -644,7 +607,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(23, 94);
+            this.label2.Location = new System.Drawing.Point(45, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 22);
             this.label2.TabIndex = 119;
@@ -657,7 +620,7 @@
             this.txtSinavYanlis.Enabled = false;
             this.txtSinavYanlis.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSinavYanlis.ForeColor = System.Drawing.Color.Black;
-            this.txtSinavYanlis.Location = new System.Drawing.Point(377, 177);
+            this.txtSinavYanlis.Location = new System.Drawing.Point(394, 174);
             this.txtSinavYanlis.Multiline = true;
             this.txtSinavYanlis.Name = "txtSinavYanlis";
             this.txtSinavYanlis.Size = new System.Drawing.Size(110, 29);
@@ -669,7 +632,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(302, 133);
+            this.label7.Location = new System.Drawing.Point(319, 130);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 22);
             this.label7.TabIndex = 121;
@@ -681,7 +644,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(307, 178);
+            this.label8.Location = new System.Drawing.Point(324, 175);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 22);
             this.label8.TabIndex = 122;
@@ -689,83 +652,173 @@
             // 
             // xtraTabPage3
             // 
-            this.xtraTabPage3.Controls.Add(this.chartControl1);
-            this.xtraTabPage3.Controls.Add(this.panel4);
+            this.xtraTabPage3.Controls.Add(this.xtraTabControl2);
             this.xtraTabPage3.Controls.Add(this.button3);
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1090, 759);
             this.xtraTabPage3.Text = "xtraTabPage3";
             // 
-            // chartControl1
+            // xtraTabControl2
             // 
-            this.chartControl1.DataBindings = null;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram1;
-            this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Legend.Title.Text = "Konular";
-            this.chartControl1.Legend.Title.Visible = true;
-            this.chartControl1.Legend.UseCheckBoxes = true;
-            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            this.chartControl1.Location = new System.Drawing.Point(4, 189);
-            this.chartControl1.Name = "chartControl1";
-            series1.Name = "Doğru";
-            sideBySideBarSeriesView1.ColorEach = true;
-            sideBySideBarSeriesView1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Hatch;
-            series1.View = sideBySideBarSeriesView1;
-            series2.Name = "Yanlış";
-            sideBySideBarSeriesView2.ColorEach = true;
-            series2.View = sideBySideBarSeriesView2;
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1,
-        series2};
-            this.chartControl1.Size = new System.Drawing.Size(1083, 567);
-            this.chartControl1.TabIndex = 143;
+            this.xtraTabControl2.Location = new System.Drawing.Point(0, 102);
+            this.xtraTabControl2.Name = "xtraTabControl2";
+            this.xtraTabControl2.SelectedTabPage = this.xtraTabPage5;
+            this.xtraTabControl2.Size = new System.Drawing.Size(1095, 662);
+            this.xtraTabControl2.TabIndex = 144;
+            this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage5,
+            this.xtraTabPage6});
             // 
-            // panel4
+            // xtraTabPage5
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.btnGrafikOlustur);
-            this.panel4.Controls.Add(this.cmbIstatistikDers);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Location = new System.Drawing.Point(3, 107);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1083, 76);
-            this.panel4.TabIndex = 142;
+            this.xtraTabPage5.Controls.Add(this.panel5);
+            this.xtraTabPage5.Controls.Add(this.chartControl2);
+            this.xtraTabPage5.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.Image")));
+            this.xtraTabPage5.Name = "xtraTabPage5";
+            this.xtraTabPage5.Size = new System.Drawing.Size(1089, 615);
+            this.xtraTabPage5.Text = "Puan İstatistik";
             // 
-            // btnGrafikOlustur
+            // panel5
             // 
-            this.btnGrafikOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.btnGrafikOlustur.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnGrafikOlustur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGrafikOlustur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGrafikOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrafikOlustur.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGrafikOlustur.ForeColor = System.Drawing.Color.White;
-            this.btnGrafikOlustur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrafikOlustur.Location = new System.Drawing.Point(804, 19);
-            this.btnGrafikOlustur.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGrafikOlustur.Name = "btnGrafikOlustur";
-            this.btnGrafikOlustur.Size = new System.Drawing.Size(264, 43);
-            this.btnGrafikOlustur.TabIndex = 127;
-            this.btnGrafikOlustur.Text = "Grafik Oluştur";
-            this.btnGrafikOlustur.UseVisualStyleBackColor = false;
-            this.btnGrafikOlustur.Click += new System.EventHandler(this.btnGrafikOlustur_Click);
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.btnPuanlıkGrafikOlustur);
+            this.panel5.Controls.Add(this.cmbPuanlıkIstatistik);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1083, 81);
+            this.panel5.TabIndex = 145;
             // 
-            // cmbIstatistikDers
+            // btnPuanlıkGrafikOlustur
             // 
-            this.cmbIstatistikDers.Location = new System.Drawing.Point(355, 25);
-            this.cmbIstatistikDers.Name = "cmbIstatistikDers";
-            this.cmbIstatistikDers.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbIstatistikDers.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cmbIstatistikDers.Properties.Appearance.Options.UseFont = true;
-            this.cmbIstatistikDers.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbIstatistikDers.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.cmbIstatistikDers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.btnPuanlıkGrafikOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.btnPuanlıkGrafikOlustur.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPuanlıkGrafikOlustur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPuanlıkGrafikOlustur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPuanlıkGrafikOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPuanlıkGrafikOlustur.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPuanlıkGrafikOlustur.ForeColor = System.Drawing.Color.White;
+            this.btnPuanlıkGrafikOlustur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPuanlıkGrafikOlustur.Location = new System.Drawing.Point(802, 19);
+            this.btnPuanlıkGrafikOlustur.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPuanlıkGrafikOlustur.Name = "btnPuanlıkGrafikOlustur";
+            this.btnPuanlıkGrafikOlustur.Size = new System.Drawing.Size(264, 43);
+            this.btnPuanlıkGrafikOlustur.TabIndex = 127;
+            this.btnPuanlıkGrafikOlustur.Text = "Grafik Oluştur";
+            this.btnPuanlıkGrafikOlustur.UseVisualStyleBackColor = false;
+            this.btnPuanlıkGrafikOlustur.Click += new System.EventHandler(this.btnPuanlıkGrafikOlustur_Click);
+            // 
+            // cmbPuanlıkIstatistik
+            // 
+            this.cmbPuanlıkIstatistik.Location = new System.Drawing.Point(353, 25);
+            this.cmbPuanlıkIstatistik.Name = "cmbPuanlıkIstatistik";
+            this.cmbPuanlıkIstatistik.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbPuanlıkIstatistik.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cmbPuanlıkIstatistik.Properties.Appearance.Options.UseFont = true;
+            this.cmbPuanlıkIstatistik.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbPuanlıkIstatistik.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.cmbPuanlıkIstatistik.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbIstatistikDers.Size = new System.Drawing.Size(219, 30);
-            this.cmbIstatistikDers.TabIndex = 155;
+            this.cmbPuanlıkIstatistik.Properties.Items.AddRange(new object[] {
+            "Matematik"});
+            this.cmbPuanlıkIstatistik.Size = new System.Drawing.Size(219, 30);
+            this.cmbPuanlıkIstatistik.TabIndex = 155;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(270, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 30);
+            this.label1.TabIndex = 154;
+            this.label1.Text = "Ders:";
+            // 
+            // chartControl2
+            // 
+            this.chartControl2.DataBindings = null;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.Tickmarks.MinorVisible = false;
+            xyDiagram1.AxisY.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.WholeRange.Auto = false;
+            xyDiagram1.AxisY.WholeRange.MaxValueSerializable = "100";
+            xyDiagram1.AxisY.WholeRange.MinValueSerializable = "10";
+            this.chartControl2.Diagram = xyDiagram1;
+            this.chartControl2.Legend.Name = "Default Legend";
+            this.chartControl2.Location = new System.Drawing.Point(1, 90);
+            this.chartControl2.Name = "chartControl2";
+            pointSeriesLabel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            series1.Label = pointSeriesLabel1;
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Series 1";
+            lineSeriesView1.Color = System.Drawing.Color.SkyBlue;
+            lineSeriesView1.LineMarkerOptions.Size = 12;
+            lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.View = lineSeriesView1;
+            this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl2.Size = new System.Drawing.Size(1089, 525);
+            this.chartControl2.TabIndex = 0;
+            // 
+            // xtraTabPage6
+            // 
+            this.xtraTabPage6.Controls.Add(this.pnlDerslikIstatistik);
+            this.xtraTabPage6.Controls.Add(this.chartControl1);
+            this.xtraTabPage6.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.Image")));
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.Size = new System.Drawing.Size(1089, 615);
+            this.xtraTabPage6.Text = "Derslik İstatistik";
+            // 
+            // pnlDerslikIstatistik
+            // 
+            this.pnlDerslikIstatistik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pnlDerslikIstatistik.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDerslikIstatistik.Controls.Add(this.btnDerslikGrafikOlustur);
+            this.pnlDerslikIstatistik.Controls.Add(this.cmbDerslikIstatistik);
+            this.pnlDerslikIstatistik.Controls.Add(this.label11);
+            this.pnlDerslikIstatistik.Location = new System.Drawing.Point(4, 3);
+            this.pnlDerslikIstatistik.Name = "pnlDerslikIstatistik";
+            this.pnlDerslikIstatistik.Size = new System.Drawing.Size(1083, 81);
+            this.pnlDerslikIstatistik.TabIndex = 144;
+            // 
+            // btnDerslikGrafikOlustur
+            // 
+            this.btnDerslikGrafikOlustur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.btnDerslikGrafikOlustur.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDerslikGrafikOlustur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDerslikGrafikOlustur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDerslikGrafikOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDerslikGrafikOlustur.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDerslikGrafikOlustur.ForeColor = System.Drawing.Color.White;
+            this.btnDerslikGrafikOlustur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDerslikGrafikOlustur.Location = new System.Drawing.Point(802, 19);
+            this.btnDerslikGrafikOlustur.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDerslikGrafikOlustur.Name = "btnDerslikGrafikOlustur";
+            this.btnDerslikGrafikOlustur.Size = new System.Drawing.Size(264, 43);
+            this.btnDerslikGrafikOlustur.TabIndex = 127;
+            this.btnDerslikGrafikOlustur.Text = "Grafik Oluştur";
+            this.btnDerslikGrafikOlustur.UseVisualStyleBackColor = false;
+            this.btnDerslikGrafikOlustur.Click += new System.EventHandler(this.btnDerslikGrafikOlustur_Click);
+            // 
+            // cmbDerslikIstatistik
+            // 
+            this.cmbDerslikIstatistik.Location = new System.Drawing.Point(353, 25);
+            this.cmbDerslikIstatistik.Name = "cmbDerslikIstatistik";
+            this.cmbDerslikIstatistik.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbDerslikIstatistik.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cmbDerslikIstatistik.Properties.Appearance.Options.UseFont = true;
+            this.cmbDerslikIstatistik.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbDerslikIstatistik.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.cmbDerslikIstatistik.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbDerslikIstatistik.Properties.Items.AddRange(new object[] {
+            "Matematik"});
+            this.cmbDerslikIstatistik.Size = new System.Drawing.Size(219, 30);
+            this.cmbDerslikIstatistik.TabIndex = 155;
             // 
             // label11
             // 
@@ -773,11 +826,37 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(272, 23);
+            this.label11.Location = new System.Drawing.Point(270, 23);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 30);
             this.label11.TabIndex = 154;
             this.label11.Text = "Ders:";
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.DataBindings = null;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram2;
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Legend.Title.Text = "Konular";
+            this.chartControl1.Legend.Title.Visible = true;
+            this.chartControl1.Legend.UseCheckBoxes = true;
+            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            this.chartControl1.Location = new System.Drawing.Point(2, 90);
+            this.chartControl1.Name = "chartControl1";
+            series2.Name = "Doğru";
+            sideBySideBarSeriesView1.ColorEach = true;
+            sideBySideBarSeriesView1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Hatch;
+            series2.View = sideBySideBarSeriesView1;
+            series3.Name = "Yanlış";
+            sideBySideBarSeriesView2.ColorEach = true;
+            series3.View = sideBySideBarSeriesView2;
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series2,
+        series3};
+            this.chartControl1.Size = new System.Drawing.Size(1082, 525);
+            this.chartControl1.TabIndex = 145;
             // 
             // button3
             // 
@@ -1143,6 +1222,15 @@
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Size = new System.Drawing.Size(1367, 0);
             // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.MaxItemId = 52;
+            // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
@@ -1166,15 +1254,6 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1367, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 766);
-            // 
-            // barManager1
-            // 
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.MaxItemId = 52;
             // 
             // OgrenciScreen
             // 
@@ -1206,24 +1285,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSınav)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSınavView)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSınıf.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDers.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.xtraTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
+            this.xtraTabControl2.ResumeLayout(false);
+            this.xtraTabPage5.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPuanlıkIstatistik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
+            this.xtraTabPage6.ResumeLayout(false);
+            this.pnlDerslikIstatistik.ResumeLayout(false);
+            this.pnlDerslikIstatistik.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDerslikIstatistik.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbIstatistikDers.Properties)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
             this.xtraTabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picOgrUpdateResim)).EndInit();
@@ -1277,16 +1367,12 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtBos;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridSınav;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridSınavView;
         private System.Windows.Forms.Button button4;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbSınıf;
         private DevExpress.XtraEditors.ComboBoxEdit cmbDers;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSinavSinif;
         private System.Windows.Forms.TextBox txtTarih;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
@@ -1301,16 +1387,24 @@
         private System.Windows.Forms.TextBox txtogrID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnGrafikOlustur;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbIstatistikDers;
-        private System.Windows.Forms.Label label11;
-        private DevExpress.XtraCharts.ChartControl chartControl1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
+        private DevExpress.XtraCharts.ChartControl chartControl2;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
+        private System.Windows.Forms.Panel pnlDerslikIstatistik;
+        private System.Windows.Forms.Button btnDerslikGrafikOlustur;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbDerslikIstatistik;
+        private System.Windows.Forms.Label label11;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnPuanlıkGrafikOlustur;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbPuanlıkIstatistik;
+        private System.Windows.Forms.Label label1;
     }
 }
 

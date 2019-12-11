@@ -65,9 +65,6 @@
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\PresentationFramework.4.6.0\lib\PresentationFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -81,20 +78,14 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ders.cs" />
     <Compile Include="FrmGiris.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmGiris.Designer.cs">
       <DependentUpon>FrmGiris.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmIstatistik.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmIstatistik.Designer.cs">
-      <DependentUpon>FrmIstatistik.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmKayit.cs">
       <SubType>Form</SubType>
@@ -103,7 +94,9 @@
       <DependentUpon>FrmKayit.cs</DependentUpon>
     </Compile>
     <Compile Include="GirisServisi.cs" />
+    <Compile Include="IDers.cs" />
     <Compile Include="IIstatistik.cs" />
+    <Compile Include="IKonu.cs" />
     <Compile Include="IResim.cs" />
     <Compile Include="ISinav.cs" />
     <Compile Include="ISinavYap.cs" />
@@ -138,18 +131,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Sifrele.cs" />
     <Compile Include="Sinav.cs" />
     <Compile Include="SinavDetay.cs" />
     <Compile Include="SinavYap.cs" />
     <Compile Include="Soru.cs" />
     <Compile Include="sqlBaglanti.cs" />
-    <Compile Include="TFuncKontrol.cs" />
     <EmbeddedResource Include="FrmGiris.resx">
       <DependentUpon>FrmGiris.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmIstatistik.resx">
-      <DependentUpon>FrmIstatistik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKayit.resx">
       <DependentUpon>FrmKayit.cs</DependentUpon>
@@ -169,7 +157,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

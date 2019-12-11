@@ -17,7 +17,7 @@ namespace SmartExam
         public string Resim { get; set; }
         public string KullanıcıID { get; set; }
         public string Sifre { get; set; }
-        public abstract void KisiEkle();
+        public abstract bool KisiEkle();
         public abstract void KisiBilgiGetir(string kullaniciAdi);
         public abstract void KisiBilgiGuncelle(int DersID);
     }

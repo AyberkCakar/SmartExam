@@ -37,7 +37,7 @@
             this.btnGiris = new DevExpress.XtraEditors.SimpleButton();
             this.btnKayit = new DevExpress.XtraEditors.SimpleButton();
             this.txtSifre = new System.Windows.Forms.TextBox();
-            this.txtKullaniciID = new System.Windows.Forms.TextBox();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,7 +78,7 @@
             this.panel1.Controls.Add(this.btnGiris);
             this.panel1.Controls.Add(this.btnKayit);
             this.panel1.Controls.Add(this.txtSifre);
-            this.panel1.Controls.Add(this.txtKullaniciID);
+            this.panel1.Controls.Add(this.txtKullaniciAdi);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(546, 132);
             this.panel1.Name = "panel1";
@@ -107,7 +107,6 @@
             this.rdbOgretmen.Name = "rdbOgretmen";
             this.rdbOgretmen.Size = new System.Drawing.Size(116, 25);
             this.rdbOgretmen.TabIndex = 107;
-            this.rdbOgretmen.TabStop = true;
             this.rdbOgretmen.Text = "Öğretmen";
             this.rdbOgretmen.UseVisualStyleBackColor = false;
             // 
@@ -116,6 +115,7 @@
             this.rdbOgrenci.AutoSize = true;
             this.rdbOgrenci.BackColor = System.Drawing.Color.Transparent;
             this.rdbOgrenci.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rdbOgrenci.Checked = true;
             this.rdbOgrenci.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbOgrenci.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
             this.rdbOgrenci.Location = new System.Drawing.Point(94, 136);
@@ -177,22 +177,24 @@
             this.txtSifre.Text = "Sifre";
             this.txtSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSifre.Click += new System.EventHandler(this.txtSifre_Click);
+            this.txtSifre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSifre_KeyPress);
             // 
-            // txtKullaniciID
+            // txtKullaniciAdi
             // 
-            this.txtKullaniciID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.txtKullaniciID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKullaniciID.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtKullaniciID.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKullaniciID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
-            this.txtKullaniciID.Location = new System.Drawing.Point(78, 201);
-            this.txtKullaniciID.Multiline = true;
-            this.txtKullaniciID.Name = "txtKullaniciID";
-            this.txtKullaniciID.Size = new System.Drawing.Size(301, 28);
-            this.txtKullaniciID.TabIndex = 102;
-            this.txtKullaniciID.Text = "Kullanıcı ID";
-            this.txtKullaniciID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtKullaniciID.Click += new System.EventHandler(this.txtKullaniciID_Click);
+            this.txtKullaniciAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
+            this.txtKullaniciAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKullaniciAdi.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtKullaniciAdi.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKullaniciAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(155)))), ((int)(((byte)(156)))));
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(78, 201);
+            this.txtKullaniciAdi.Multiline = true;
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(301, 28);
+            this.txtKullaniciAdi.TabIndex = 102;
+            this.txtKullaniciAdi.Text = "Kullanıcı Adı";
+            this.txtKullaniciAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKullaniciAdi.Click += new System.EventHandler(this.txtKullaniciID_Click);
+            this.txtKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKullaniciID_KeyPress);
             // 
             // label2
             // 
@@ -239,7 +241,7 @@
         private DevExpress.XtraEditors.SimpleButton btnGiris;
         private DevExpress.XtraEditors.SimpleButton btnKayit;
         private System.Windows.Forms.TextBox txtSifre;
-        private System.Windows.Forms.TextBox txtKullaniciID;
+        private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.SimpleButton btnCikis;

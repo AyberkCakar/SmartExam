@@ -20,7 +20,16 @@ namespace SmartExam
 
         public void TumDersler() 
         {
-
+            SqlCommand dersGetir = new SqlCommand("select * from Tbl_Ders", connect.baglanti());
+            SqlDataReader Dtr = dersGetir.ExecuteReader();
+            while (Dtr.Read())
+            {
+                Ders ders = new Ders();
+                ders.DersID = Convert.ToInt32(Dtr[0]);
+                ders.DersAD = Dtr[1].ToString();
+                Dersler.Add(ders);
+            }
+            connect.baglanti().Close();
         }
     }
 }

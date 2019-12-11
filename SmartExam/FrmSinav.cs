@@ -21,28 +21,16 @@ namespace SmartExam
         //  Ana Tanımlar
         //
 
+        TFuncKontrol FuncKontrol = new TFuncKontrol();
         Ogrenci ogr = new Ogrenci();
         SinavYap sinavYap = new SinavYap();
         Sinav sinav = new Sinav();
+        public bool ogrenciDurum;
         public string dersAd;
         public int saniye = 59, dakika = 9;
-        public int ders, sinif, ogrenciID;
-        string[] SoruCevap = new string[11] { null, null, null, null, null, null, null, null, null, null, null };  // Sorunun Öğrenci Tarafından Verilen Cevabı Tutuluyor.
+        public int ders, ogrenciID;
+        string[] SoruCevap = new string[21] { null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null };  // Sorunun Öğrenci Tarafından Verilen Cevabı Tutuluyor.
 
-        // Soru Cevap Kontrolleri İçin TFunc
-        
-        private static bool durum;
-        public Func<string, string, Boolean> funcSoruCevap = (Cevap, DogruCevap) =>
-        {
-            if (Cevap == DogruCevap)
-            {
-                durum = true;
-            }
-            else
-                durum = false;
-            return durum;
-
-        };
 
         //
         // Ana Menü İşlemleri
@@ -65,7 +53,7 @@ namespace SmartExam
 
         void gridSoruDoldur()
         {
-            if (ogr.SinavinSorulariniGetir(sinavYap, ders, sinif, ogrenciID) == 10)
+            if (ogr.SinavinSorulariniGetir(sinavYap, ders, ogrenciID,ogrenciDurum) == 20)
             {
                 DataTable tablo = new DataTable();
                 tablo.Columns.Add("Soru No", typeof(int));
@@ -91,7 +79,7 @@ namespace SmartExam
             else
             {
                 this.Close();
-                MessageBox.Show("Yeterli Soru Yok", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Yeterli Soru Yok...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -100,7 +88,7 @@ namespace SmartExam
         int index = 0;
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(index != 9)
+            if(index != 19)
             {
                 index++;
                 SoruIleriGeri(index);
@@ -130,46 +118,53 @@ namespace SmartExam
 
         void SoruIleriGeri(int index)
         {
-            DataRow dataRow = gridView1.GetDataRow(gridView1.GetDataSourceRowIndex(index));
-            lblSoruSayisi.Text = "Soru - " + Convert.ToInt32(dataRow[0]).ToString();
-            lblSoruNo1.Text = Convert.ToInt32(dataRow[0]).ToString();
-            lblSoruID.Text = dataRow[1].ToString();
-            lblSoru.Text = dataRow[2].ToString();
-            lblCevapA.Text = dataRow[3].ToString();
-            lblCevapB.Text = dataRow[4].ToString();
-            lblCevapC.Text = dataRow[5].ToString();
-            lblCevapD.Text = dataRow[6].ToString();
-            lblCevapE.Text = dataRow[7].ToString();
-            lblSoruCevap.Text = dataRow[8].ToString();
-            pictureBox1.ImageLocation = dataRow[9].ToString(); 
-            if (SoruCevap[Convert.ToInt16(dataRow[0])] == "A")     // Soruya Cevap Verdiysem, Cevap Verdiğim Şıkkı Yeşil Yap.
-            {                                                     
-                butunButonlariBoya();
-                btnA.BackColor = Color.LightGreen;
-            }
-            else if (SoruCevap[Convert.ToInt16(dataRow[0])] == "B")
+            try
             {
-                butunButonlariBoya();
-                btnB.BackColor = Color.LightGreen;
+                DataRow dataRow = gridView1.GetDataRow(gridView1.GetDataSourceRowIndex(index));
+                lblSoruSayisi.Text = "Soru - " + Convert.ToInt32(dataRow[0]).ToString();
+                lblSoruNo1.Text = Convert.ToInt32(dataRow[0]).ToString();
+                lblSoruID.Text = dataRow[1].ToString();
+                lblSoru.Text = dataRow[2].ToString();
+                lblCevapA.Text = dataRow[3].ToString();
+                lblCevapB.Text = dataRow[4].ToString();
+                lblCevapC.Text = dataRow[5].ToString();
+                lblCevapD.Text = dataRow[6].ToString();
+                lblCevapE.Text = dataRow[7].ToString();
+                lblSoruCevap.Text = dataRow[8].ToString();
+                pictureBox1.ImageLocation = dataRow[9].ToString();
+                if (SoruCevap[Convert.ToInt16(dataRow[0])] == "A")     // Soruya Cevap Verdiysem, Cevap Verdiğim Şıkkı Yeşil Yap.
+                {
+                    butunButonlariBoya();
+                    btnA.BackColor = Color.LightGreen;
+                }
+                else if (SoruCevap[Convert.ToInt16(dataRow[0])] == "B")
+                {
+                    butunButonlariBoya();
+                    btnB.BackColor = Color.LightGreen;
+                }
+                else if (SoruCevap[Convert.ToInt16(dataRow[0])] == "C")
+                {
+                    butunButonlariBoya();
+                    btnC.BackColor = Color.LightGreen;
+                }
+                else if (SoruCevap[Convert.ToInt16(dataRow[0])] == "D")
+                {
+                    butunButonlariBoya();
+                    btnD.BackColor = Color.LightGreen;
+                }
+                else if (SoruCevap[Convert.ToInt16(dataRow[0])] == "E")
+                {
+                    butunButonlariBoya();
+                    btnE.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    butunButonlariBoya();
+                }
             }
-            else if (SoruCevap[Convert.ToInt16(dataRow[0])] == "C")
+            catch (Exception)
             {
-                butunButonlariBoya();
-                btnC.BackColor = Color.LightGreen;
-            }
-            else if (SoruCevap[Convert.ToInt16(dataRow[0])] == "D")
-            {
-                butunButonlariBoya();
-                btnD.BackColor = Color.LightGreen;
-            }
-            else if (SoruCevap[Convert.ToInt16(dataRow[0])] == "E")
-            {
-                butunButonlariBoya();
-                btnE.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                butunButonlariBoya();
+                MessageBox.Show("Sınav Ekranı Kapatılıyor...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -270,13 +265,13 @@ namespace SmartExam
                         sin.dogruYanlıs = false;
                         sinavYap.sinavKaydet.Add(sin);
                     }
-                    else if (funcSoruCevap( SoruCevap[i], sin.Cevap) == true)
+                    else if (FuncKontrol.funcSoruCevap( SoruCevap[i], sin.Cevap) == true)
                     {
                         dogru++;
                         sin.dogruYanlıs = true;
                         sinavYap.sinavKaydet.Add(sin);
                     }
-                    else if (funcSoruCevap( SoruCevap[i], sin.Cevap) == false)
+                    else if (FuncKontrol.funcSoruCevap( SoruCevap[i], sin.Cevap) == false)
                     {
                         yanlis++;
                         sin.dogruYanlıs = false;
@@ -290,9 +285,8 @@ namespace SmartExam
                 }
 
                 sinav.DersID = ders;
-                sinav.Sinif = sinif;
-
-                ogr.SinavCozulenSoruKaydet(sinavYap,ogrenciID);
+                
+                ogr.SinavCozulenSoruKaydet(sinavYap,ogrenciID,ogr.sonSinavID(ogrenciID)+1);
 
                 ogr.CozulenSinavKaydet(sinav,dogru,yanlis,bos,ogrenciID);
 
@@ -308,8 +302,7 @@ namespace SmartExam
             {
 
             }
-        }
-        
+        }  
         
         void bitirFunc()                    // Bitir Dediğimde Sınavın Cevap Şıklarını Kilitle
         {                                   //  Sorunun Cevaplarını Kontrol Edebilmek İçin Cevapları Görünür Yap
