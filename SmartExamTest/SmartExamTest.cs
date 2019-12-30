@@ -9,24 +9,24 @@ namespace SmartExamTest
     {
         // Öğretmen Soru Eklerken Yasak Karakter Girememesi Testi
 
-        public void ogretmenSoruEkleKontrolTest(string soru, string A, string B, string C,string D, string E,string donenDeger)
+        public void ogretmenSoruEkleKontrolTest(string soru, string A, string B, string C,string D,string donenDeger)
         {
             TFuncKontrol tfk = new TFuncKontrol();
             string sonuc;
-            sonuc = tfk.formYasakKontrol(soru,A,B,C,D,E);
+            sonuc = tfk.formYasakKontrol(soru,A,B,C,D);
             Assert.AreEqual(donenDeger,sonuc);
         }
 
         [TestMethod]
         public void ogretmenSoruEkleKontrolYanlis()
         {
-            ogretmenSoruEkleKontrolTest("smart", "'a' % 5 ", "b cevabı", "c cevabı", "d cevabı", "e cevabı", "A Şıkkı  Kısmındaki Girmiş Olduğunuz Yasak Karakterlere ( ', *, =, % ) Dikkat Ediniz...");
+            ogretmenSoruEkleKontrolTest("smart", "'a' % 5 ", "b cevabı", "c cevabı", "d cevabı", "A Şıkkı  Kısmındaki Girmiş Olduğunuz Yasak Karakterlere ( ', *, =, % ) Dikkat Ediniz...");
         }
 
         [TestMethod]
         public void ogretmenSoruEkleKontrolDogru()
         {
-            ogretmenSoruEkleKontrolTest("smart", "a cevabı", "b cevabı", "c cevabı", "d cevabı", "e cevabı", "Başarılı");
+            ogretmenSoruEkleKontrolTest("smart", "a cevabı", "b cevabı", "c cevabı", "d cevabı", "Başarılı");
         }
 
         // Kullanıcı Şifresini Şifreleme Testi

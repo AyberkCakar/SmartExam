@@ -15,7 +15,7 @@ namespace SmartExam
         // T Func Soru Ekleme Yasak Karakter Kullanımı Kontrolü
 
         private static string durumYasak;
-        public Func<string, string, string, string, string, string, string> formYasakKontrol = (Soru, A, B, C, D, E) =>
+        public Func<string, string, string, string, string, string> formYasakKontrol = (Soru, A, B, C, D) =>
         {
             if (Soru.IndexOf("'") > 0 || Soru.IndexOf("*") > 0 || Soru.IndexOf(" = ") > 0 || Soru.IndexOf(" % ") > 0)
             {
@@ -37,10 +37,6 @@ namespace SmartExam
             {
                 durumYasak = "D Şıkkı Kısmındaki Girmiş Olduğunuz Yasak Karakterlere ( ', *, =, % ) Dikkat Ediniz...";
             }
-            else if (E.IndexOf("'") > 0 || E.IndexOf("*") > 0 || E.IndexOf("=") > 0 || E.IndexOf(" % ") > 0)
-            {
-                durumYasak = "E Şıkkı Kısmındaki Girmiş Olduğunuz Yasak Karakterlere ( ', *, =, % ) Dikkat Ediniz...";
-            }
             else
                 durumYasak = "Başarılı";
 
@@ -53,7 +49,7 @@ namespace SmartExam
         
 
         private static string durumNull;
-        public Func<string, string, string, string, string, string, string, string, string, string> formNullKontrol = (Soru, A, B, C, D, E, Cevap, Ders, Konu) =>
+        public Func<string, string, string, string, string, string, string, string, string> formNullKontrol = (Soru, A, B, C, D, Cevap, Ders, Konu) =>
         {
             if (Soru.Length <= 0)
             {
@@ -74,10 +70,6 @@ namespace SmartExam
             else if (D.Length <= 0 || D.Length > 50)
             {
                 durumNull = "D Şıkkı Bilgilerinizi Kontrol Ediniz...";
-            }
-            else if (E.Length <= 0 || E.Length > 50)
-            {
-                durumNull = "E Şıkkı Bilgilerinizi Kontrol Ediniz...";
             }
             else if (Cevap.Length <= 0)
             {

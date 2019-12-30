@@ -45,7 +45,7 @@ namespace SmartExam
 
         void IkinciKonulariGetir(int Ders,int ogrID)
         {
-            SqlCommand konuIkinciGetir = new SqlCommand("select Top 4 (select Count(*)from Tbl_CozulmusSoru where Tbl_CozulmusSoru.KonuID = Tbl_Konu.KonuID and OgrenciID = @p2 and DogruYanlis=0) as 'Yanlış',KonuID from Tbl_Konu  where  DersID =  @p1  order by Yanlış desc ", connect.baglanti());
+            SqlCommand konuIkinciGetir = new SqlCommand("exec ikinciKonu @p2,@p1", connect.baglanti());
             konuIkinciGetir.Parameters.AddWithValue("@p1", Ders);
             konuIkinciGetir.Parameters.AddWithValue("@p2", ogrID);
             SqlDataReader dtKonu = konuIkinciGetir.ExecuteReader();
@@ -59,16 +59,17 @@ namespace SmartExam
 
         // Her Sınav İçin Gelen Standart Konu Soruları
 
-        int soruIlKisim(SinavYap sinavYap,int Ders,int TopSayisi)
+        int soruIlKisim(SinavYap sinavYap,int Ders,int TopSayisi,int ogrenciID)
         {
             IlkKonulariGetir(Ders);
 
             foreach (Konu sub in konu.IlkSinavKonu)
             {
-                SqlCommand soruGetir = new SqlCommand("Select Top(@p3) So.SoruID,So.Soru,Ce.A,Ce.B,Ce.C,Ce.D,Ce.E,Ce.Cevap,So.Resim,So.KonuID from Tbl_Soru So inner join Tbl_Cevap Ce on so.SoruID = Ce.SoruID  where  DersID = @p1 and KonuID=@p2  ORDER BY NEWID()", connect.baglanti());
+                SqlCommand soruGetir = new SqlCommand("exec soruIlkKisim @p3,@p1,@p2,@p4", connect.baglanti());
                 soruGetir.Parameters.AddWithValue("@p1", Ders);
                 soruGetir.Parameters.AddWithValue("@p2", sub.KonuID);
                 soruGetir.Parameters.AddWithValue("@p3", TopSayisi);
+                soruGetir.Parameters.AddWithValue("@p4", ogrenciID);
                 SqlDataReader dtSoru = soruGetir.ExecuteReader();
                 while (dtSoru.Read())
                 {
@@ -80,10 +81,8 @@ namespace SmartExam
                     sinav.BCevabi = dtSoru[3].ToString();
                     sinav.CCevabi = dtSoru[4].ToString();
                     sinav.DCevabi = dtSoru[5].ToString();
-                    sinav.ECevabi = dtSoru[6].ToString();
-                    sinav.Cevap = dtSoru[7].ToString();
-                    sinav.Resim = dtSoru[8].ToString();
-                    sinav.KonuID = Convert.ToInt32(dtSoru[9]);
+                    sinav.Cevap = dtSoru[6].ToString();
+                    sinav.Resim = dtSoru[7].ToString();
                     sinavYap.sinavYaps.Add(sinav);
                 }
             }
@@ -98,7 +97,7 @@ namespace SmartExam
             IkinciKonulariGetir(Ders, ogrenciID);
             foreach (Konu sub in konu.IkinciSinavKonu)
             {
-                SqlCommand soruGetir = new SqlCommand("Select Top(@p3) So.SoruID,So.Soru,Ce.A,Ce.B,Ce.C,Ce.D,Ce.E,Ce.Cevap,So.Resim,So.KonuID from Tbl_Soru So inner join Tbl_Cevap Ce on so.SoruID = Ce.SoruID    where DersID = @p1  and KonuID= @p2 and So.SoruID not in  (Select SoruID from Tbl_CozulmusSoru where DogruYanlis = 1 and OgrenciID =@p4) ORDER BY NEWID() ", connect.baglanti());
+                SqlCommand soruGetir = new SqlCommand(" exec soruIkinciKisim @p3,@p1,@p2,@p4 ", connect.baglanti());
                 soruGetir.Parameters.AddWithValue("@p1", Ders);
                 soruGetir.Parameters.AddWithValue("@p2", sub.KonuID);
                 soruGetir.Parameters.AddWithValue("@p3",TopSayisi);
@@ -114,10 +113,8 @@ namespace SmartExam
                     sinav.BCevabi = dtSoru[3].ToString();
                     sinav.CCevabi = dtSoru[4].ToString();
                     sinav.DCevabi = dtSoru[5].ToString();
-                    sinav.ECevabi = dtSoru[6].ToString();
-                    sinav.Cevap = dtSoru[7].ToString(); 
-                    sinav.Resim = dtSoru[8].ToString();
-                    sinav.KonuID = Convert.ToInt32(dtSoru[9]);
+                    sinav.Cevap = dtSoru[6].ToString(); 
+                    sinav.Resim = dtSoru[7].ToString();
                     sinavYap.sinavYaps.Add(sinav);
                 }
                 TopSayisi--;
@@ -130,13 +127,13 @@ namespace SmartExam
         {
             if (ogrenciDurum == false)
             {
-                soruSayisi += soruIlKisim(sinavYap, Ders, 4);
+                soruSayisi += soruIlKisim(sinavYap, Ders, 4,ogrenciID);
                 return soruSayisi;
             }
             else
             {
                 // Standart Her Konudan Gelen Sorular
-                soruSayisi += soruIlKisim(sinavYap, Ders, 2);
+                soruSayisi += soruIlKisim(sinavYap, Ders, 2,ogrenciID);
                 // Gereken Diğer Kısmı Bilemediği Konular
                 soruSayisi = soruIkinciKisim(sinavYap, Ders,ogrenciID);
                 return soruSayisi;
@@ -149,12 +146,11 @@ namespace SmartExam
         {
             foreach (SinavYap sinavYap in sinav.sinavKaydet)
             {
-                SqlCommand cozulenSoruKaydet = new SqlCommand("insert into Tbl_CozulmusSoru (DogruYanlis,KonuID,OgrenciID,SoruID,SınavID ) values (@p1,@p2,@p3,@p4,@p5)", connect.baglanti());
+                SqlCommand cozulenSoruKaydet = new SqlCommand("insert into Tbl_CozulmusSoru (DogruYanlis,OgrenciID,SoruID,SınavID ) values (@p1,@p2,@p3,@p4)", connect.baglanti());
                 cozulenSoruKaydet.Parameters.AddWithValue("@p1", sinavYap.dogruYanlıs);
-                cozulenSoruKaydet.Parameters.AddWithValue("@p2", sinavYap.KonuID);
-                cozulenSoruKaydet.Parameters.AddWithValue("@p3", ogrenciID);
-                cozulenSoruKaydet.Parameters.AddWithValue("@p4", sinavYap.SoruID);
-                cozulenSoruKaydet.Parameters.AddWithValue("@p5", sinavID);
+                cozulenSoruKaydet.Parameters.AddWithValue("@p2", ogrenciID);
+                cozulenSoruKaydet.Parameters.AddWithValue("@p3", sinavYap.SoruID);
+                cozulenSoruKaydet.Parameters.AddWithValue("@p4", sinavID);
                 cozulenSoruKaydet.ExecuteNonQuery();
                 connect.baglanti().Close();
             }
@@ -169,20 +165,19 @@ namespace SmartExam
 
         public void SinavBilgileriniGetir(Sinav Sinavlar, int ogrID)
         {
-            SqlCommand select = new SqlCommand("select S.SınavID,Sınıf,D.DersID,DersAD,S.Dogru,S.Yanlış,S.Bos,S.Tarih from Tbl_Sınav S inner join Tbl_Ders D on D.DersID = S.DersID where s.OgrenciID = @p1", connect.baglanti());
+            SqlCommand select = new SqlCommand("select S.SınavID,D.DersID,DersAD,S.Dogru,S.Yanlış,S.Bos,S.Tarih from Tbl_Sınav S inner join Tbl_Ders D on D.DersID = S.DersID where s.OgrenciID = @p1", connect.baglanti());
             select.Parameters.AddWithValue("@p1", ogrID);
             SqlDataReader Dtr = select.ExecuteReader();
             while (Dtr.Read())
             {
                 Sinav sinav = new Sinav();
                 sinav.SinavID = Convert.ToInt32(Dtr[0]);
-                sinav.Sinif = Convert.ToInt32(Dtr[1]);
-                sinav.DersID = Convert.ToInt32(Dtr[2]);
-                sinav.DersAD = Dtr[3].ToString();
-                sinav.sinavDet.Dogru = Convert.ToInt32(Dtr[4]);
-                sinav.sinavDet.Yanliş = Convert.ToInt32(Dtr[5]);
-                sinav.sinavDet.Bos = Convert.ToInt32(Dtr[6]);
-                sinav.sinavDet.Tarih = Convert.ToDateTime(Dtr[7]);
+                sinav.DersID = Convert.ToInt32(Dtr[1]);
+                sinav.DersAD = Dtr[2].ToString();
+                sinav.sinavDet.Dogru = Convert.ToInt32(Dtr[3]);
+                sinav.sinavDet.Yanliş = Convert.ToInt32(Dtr[4]);
+                sinav.sinavDet.Bos = Convert.ToInt32(Dtr[5]);
+                sinav.sinavDet.Tarih = Convert.ToDateTime(Dtr[6]);
                 Sinavlar.Sinavlar.Add(sinav);
             }
         }
@@ -191,24 +186,22 @@ namespace SmartExam
 
         public void CozulenSinavKaydet(Sinav sinav, int Dogru, int Yanlis, int Bos, int OgrenciID)
         {
-            SqlCommand insertSinav = new SqlCommand("insert into Tbl_Sınav (Sınıf,DersID,Dogru,Yanlış,Bos,Tarih,OgrenciID) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", connect.baglanti());
-            insertSinav.Parameters.AddWithValue("@p1", sinav.Sinif);
-            insertSinav.Parameters.AddWithValue("@p2", sinav.DersID);
-            insertSinav.Parameters.AddWithValue("@p3", Dogru);
-            insertSinav.Parameters.AddWithValue("@p4", Yanlis);
-            insertSinav.Parameters.AddWithValue("@p5", Bos);
-            insertSinav.Parameters.AddWithValue("@p6", DateTime.Now);
-            insertSinav.Parameters.AddWithValue("@p7", OgrenciID);
+            SqlCommand insertSinav = new SqlCommand("insert into Tbl_Sınav (DersID,Dogru,Yanlış,Bos,Tarih,OgrenciID) values (@p1,@p2,@p3,@p4,@p5,@p6)", connect.baglanti());
+            insertSinav.Parameters.AddWithValue("@p1", sinav.DersID);
+            insertSinav.Parameters.AddWithValue("@p2", Dogru);
+            insertSinav.Parameters.AddWithValue("@p3", Yanlis);
+            insertSinav.Parameters.AddWithValue("@p4", Bos);
+            insertSinav.Parameters.AddWithValue("@p5", DateTime.Now);
+            insertSinav.Parameters.AddWithValue("@p6", OgrenciID);
             insertSinav.ExecuteNonQuery();
             connect.baglanti().Close();
         }
 
         // Son Sınav ID'sini Bulma
         int sonID;
-        public int sonSinavID(int ogrID)
+        public int sonSinavID()
         {
-            SqlCommand select = new SqlCommand("select SınavID from Tbl_Sınav where OgrenciID = @p1", connect.baglanti());
-            select.Parameters.AddWithValue("@p1", ogrID);
+            SqlCommand select = new SqlCommand("select SınavID from Tbl_Sınav order by SınavID desc", connect.baglanti());
             SqlDataReader Dtr = select.ExecuteReader();
             if (Dtr.Read())
             {
@@ -276,7 +269,7 @@ namespace SmartExam
             SqlCommand OgrBilgiGuncelle = new SqlCommand("update Tbl_Ogrenci set Sifre =@a2, OgrResim = @a3 where OgrenciID = @a1", connect.baglanti());
             OgrBilgiGuncelle.Parameters.AddWithValue("@a1", ID);
             OgrBilgiGuncelle.Parameters.AddWithValue("@a2", Sifre);
-            OgrBilgiGuncelle.Parameters.AddWithValue("a3", Resim);
+            OgrBilgiGuncelle.Parameters.AddWithValue("@a3", Resim);
             OgrBilgiGuncelle.ExecuteNonQuery();
             connect.baglanti().Close();
         }
@@ -291,9 +284,10 @@ namespace SmartExam
         {
             // Doğru Cevapların İstatistiği
 
-            SqlCommand istatistikGetirDogru = new SqlCommand("select (select Count(*)from Tbl_CozulmusSoru where Tbl_CozulmusSoru.KonuID = Tbl_Konu.KonuID and OgrenciID = @p2 and DogruYanlis=1),KonuAD from Tbl_Konu  where  DersID =  @p1 ", connect.baglanti());
+            SqlCommand istatistikGetirDogru = new SqlCommand(" exec Istatistik2 @p1,@p2,@p3", connect.baglanti());
             istatistikGetirDogru.Parameters.AddWithValue("@p1", DersID);
             istatistikGetirDogru.Parameters.AddWithValue("@p2", OgrenciID);
+            istatistikGetirDogru.Parameters.AddWithValue("@p3", 1);
             SqlDataReader dtIstatistikDogru = istatistikGetirDogru.ExecuteReader();
             while (dtIstatistikDogru.Read())
             {
@@ -305,9 +299,10 @@ namespace SmartExam
 
             // Yanlış Cevapların İstatistiği
 
-            SqlCommand istatistikGetirYanlis = new SqlCommand("select (select Count(*)from Tbl_CozulmusSoru where Tbl_CozulmusSoru.KonuID = Tbl_Konu.KonuID and OgrenciID = @p2 and DogruYanlis=0),KonuAD from Tbl_Konu  where  DersID =  @p1 ", connect.baglanti());
+            SqlCommand istatistikGetirYanlis = new SqlCommand("exec Istatistik2 @p1,@p2,@p3", connect.baglanti());
             istatistikGetirYanlis.Parameters.AddWithValue("@p1", DersID);
             istatistikGetirYanlis.Parameters.AddWithValue("@p2", OgrenciID);
+            istatistikGetirYanlis.Parameters.AddWithValue("@p3", 0);
             SqlDataReader dtIstatistikYanlis = istatistikGetirYanlis.ExecuteReader();
             while (dtIstatistikYanlis.Read())
             {

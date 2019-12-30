@@ -36,12 +36,10 @@
             this.btnB = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
             this.btnD = new System.Windows.Forms.Button();
-            this.btnE = new System.Windows.Forms.Button();
             this.lblCevapA = new DevExpress.XtraEditors.LabelControl();
             this.lblCevapB = new DevExpress.XtraEditors.LabelControl();
             this.lblCevapC = new DevExpress.XtraEditors.LabelControl();
             this.lblCevapD = new DevExpress.XtraEditors.LabelControl();
-            this.lblCevapE = new DevExpress.XtraEditors.LabelControl();
             this.lblSure = new DevExpress.XtraEditors.LabelControl();
             this.btnBitir = new DevExpress.XtraEditors.SimpleButton();
             this.button11 = new System.Windows.Forms.Button();
@@ -181,23 +179,6 @@
             this.btnD.UseVisualStyleBackColor = false;
             this.btnD.Click += new System.EventHandler(this.btnD_Click);
             // 
-            // btnE
-            // 
-            this.btnE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnE.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnE.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnE.ForeColor = System.Drawing.Color.Black;
-            this.btnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnE.Location = new System.Drawing.Point(199, 635);
-            this.btnE.Margin = new System.Windows.Forms.Padding(4);
-            this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(41, 39);
-            this.btnE.TabIndex = 129;
-            this.btnE.Text = "E";
-            this.btnE.UseVisualStyleBackColor = false;
-            this.btnE.Click += new System.EventHandler(this.btnE_Click);
-            // 
             // lblCevapA
             // 
             this.lblCevapA.Appearance.BackColor = System.Drawing.Color.White;
@@ -245,18 +226,6 @@
             this.lblCevapD.Size = new System.Drawing.Size(112, 24);
             this.lblCevapD.TabIndex = 133;
             this.lblCevapD.Text = "lblCevapD";
-            // 
-            // lblCevapE
-            // 
-            this.lblCevapE.Appearance.BackColor = System.Drawing.Color.White;
-            this.lblCevapE.Appearance.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.lblCevapE.Appearance.Options.UseBackColor = true;
-            this.lblCevapE.Appearance.Options.UseFont = true;
-            this.lblCevapE.Location = new System.Drawing.Point(262, 641);
-            this.lblCevapE.Name = "lblCevapE";
-            this.lblCevapE.Size = new System.Drawing.Size(140, 24);
-            this.lblCevapE.TabIndex = 134;
-            this.lblCevapE.Text = "labelControl8";
             // 
             // lblSure
             // 
@@ -334,7 +303,6 @@
             this.panel1.Controls.Add(this.btnBitir);
             this.panel1.Controls.Add(this.btnA);
             this.panel1.Controls.Add(this.lblSoru);
-            this.panel1.Controls.Add(this.lblCevapE);
             this.panel1.Controls.Add(this.lblSoruSayisi);
             this.panel1.Controls.Add(this.btnB);
             this.panel1.Controls.Add(this.lblCevapD);
@@ -342,7 +310,6 @@
             this.panel1.Controls.Add(this.lblCevapC);
             this.panel1.Controls.Add(this.btnD);
             this.panel1.Controls.Add(this.lblCevapB);
-            this.panel1.Controls.Add(this.btnE);
             this.panel1.Location = new System.Drawing.Point(39, 49);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1284, 802);
@@ -657,12 +624,10 @@
         private System.Windows.Forms.Button btnB;
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnD;
-        private System.Windows.Forms.Button btnE;
         private DevExpress.XtraEditors.LabelControl lblCevapA;
         private DevExpress.XtraEditors.LabelControl lblCevapB;
         private DevExpress.XtraEditors.LabelControl lblCevapC;
         private DevExpress.XtraEditors.LabelControl lblCevapD;
-        private DevExpress.XtraEditors.LabelControl lblCevapE;
         private DevExpress.XtraEditors.SimpleButton btnBitir;
         private DevExpress.XtraEditors.LabelControl lblSure;
         private System.Windows.Forms.Button button11;

@@ -48,7 +48,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.btnSoruTemizle = new System.Windows.Forms.Button();
             this.btnSoruResim = new System.Windows.Forms.Button();
-            this.rchE = new System.Windows.Forms.RichTextBox();
             this.rchD = new System.Windows.Forms.RichTextBox();
             this.rchC = new System.Windows.Forms.RichTextBox();
             this.rchB = new System.Windows.Forms.RichTextBox();
@@ -63,7 +62,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSoruEkle = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -324,7 +322,6 @@
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.btnSoruTemizle);
             this.panel2.Controls.Add(this.btnSoruResim);
-            this.panel2.Controls.Add(this.rchE);
             this.panel2.Controls.Add(this.rchD);
             this.panel2.Controls.Add(this.rchC);
             this.panel2.Controls.Add(this.rchB);
@@ -339,7 +336,6 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnSoruEkle);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label10);
@@ -368,8 +364,7 @@
             "A",
             "B",
             "C",
-            "D",
-            "E"});
+            "D"});
             this.cmbCevap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbCevap.Size = new System.Drawing.Size(78, 26);
             this.cmbCevap.TabIndex = 7;
@@ -423,19 +418,10 @@
             this.btnSoruResim.UseVisualStyleBackColor = true;
             this.btnSoruResim.Click += new System.EventHandler(this.btnSoruResim_Click);
             // 
-            // rchE
-            // 
-            this.rchE.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.rchE.Location = new System.Drawing.Point(350, 233);
-            this.rchE.Name = "rchE";
-            this.rchE.Size = new System.Drawing.Size(280, 32);
-            this.rchE.TabIndex = 6;
-            this.rchE.Text = "";
-            // 
             // rchD
             // 
             this.rchD.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.rchD.Location = new System.Drawing.Point(350, 195);
+            this.rchD.Location = new System.Drawing.Point(350, 213);
             this.rchD.Name = "rchD";
             this.rchD.Size = new System.Drawing.Size(280, 32);
             this.rchD.TabIndex = 5;
@@ -444,7 +430,7 @@
             // rchC
             // 
             this.rchC.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.rchC.Location = new System.Drawing.Point(350, 157);
+            this.rchC.Location = new System.Drawing.Point(350, 171);
             this.rchC.Name = "rchC";
             this.rchC.Size = new System.Drawing.Size(280, 32);
             this.rchC.TabIndex = 4;
@@ -453,7 +439,7 @@
             // rchB
             // 
             this.rchB.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.rchB.Location = new System.Drawing.Point(350, 119);
+            this.rchB.Location = new System.Drawing.Point(350, 129);
             this.rchB.Name = "rchB";
             this.rchB.Size = new System.Drawing.Size(280, 32);
             this.rchB.TabIndex = 3;
@@ -462,7 +448,7 @@
             // rchA
             // 
             this.rchA.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.rchA.Location = new System.Drawing.Point(350, 81);
+            this.rchA.Location = new System.Drawing.Point(350, 87);
             this.rchA.Name = "rchA";
             this.rchA.Size = new System.Drawing.Size(280, 32);
             this.rchA.TabIndex = 2;
@@ -582,7 +568,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(310, 84);
+            this.label3.Location = new System.Drawing.Point(310, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 22);
             this.label3.TabIndex = 154;
@@ -611,18 +597,6 @@
             this.label20.Size = new System.Drawing.Size(62, 22);
             this.label20.TabIndex = 151;
             this.label20.Text = "Konu:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(315, 236);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 22);
-            this.label1.TabIndex = 153;
-            this.label1.Text = "E:";
             // 
             // btnSoruEkle
             // 
@@ -681,7 +655,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(311, 196);
+            this.label6.Location = new System.Drawing.Point(311, 214);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 22);
             this.label6.TabIndex = 141;
@@ -718,7 +692,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(314, 120);
+            this.label7.Location = new System.Drawing.Point(314, 130);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(26, 22);
             this.label7.TabIndex = 121;
@@ -730,7 +704,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(310, 158);
+            this.label8.Location = new System.Drawing.Point(310, 172);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 22);
             this.label8.TabIndex = 122;
@@ -1169,7 +1143,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnSoruTemizle;
         private System.Windows.Forms.Button btnSoruResim;
-        private System.Windows.Forms.RichTextBox rchE;
         private System.Windows.Forms.RichTextBox rchD;
         private System.Windows.Forms.RichTextBox rchC;
         private System.Windows.Forms.RichTextBox rchB;
@@ -1184,7 +1157,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSoruEkle;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;

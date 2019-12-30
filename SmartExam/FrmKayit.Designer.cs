@@ -326,6 +326,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtDogumTarihi.Size = new System.Drawing.Size(210, 28);
             this.dtDogumTarihi.TabIndex = 5;
+            this.dtDogumTarihi.EditValueChanged += new System.EventHandler(this.dtDogumTarihi_EditValueChanged);
             // 
             // lblTelefon
             // 

@@ -63,15 +63,13 @@ namespace SmartExam
                 tablo.Columns.Add("ŞıkB", typeof(string));
                 tablo.Columns.Add("ŞıkC", typeof(string));
                 tablo.Columns.Add("ŞıkD", typeof(string));
-                tablo.Columns.Add("ŞıkE", typeof(string));
                 tablo.Columns.Add("Cevap", typeof(string));
                 tablo.Columns.Add("Resim", typeof(string));
-                tablo.Columns.Add("KonuID", typeof(int));
                 int SoruNo = 0;
                 foreach (SinavYap sin in sinavYap.sinavYaps)
                 {
                     SoruNo++;
-                    tablo.Rows.Add(SoruNo, sin.SoruID, sin.SoruIcerik, sin.ACevabi, sin.BCevabi, sin.CCevabi, sin.DCevabi, sin.ECevabi, sin.Cevap, sin.Resim, sin.KonuID);
+                    tablo.Rows.Add(SoruNo, sin.SoruID, sin.SoruIcerik, sin.ACevabi, sin.BCevabi, sin.CCevabi, sin.DCevabi, sin.Cevap, sin.Resim);
                     gridControl1.DataSource = tablo;
                 }
                 gridView1.OptionsBehavior.Editable = false;
@@ -129,9 +127,8 @@ namespace SmartExam
                 lblCevapB.Text = dataRow[4].ToString();
                 lblCevapC.Text = dataRow[5].ToString();
                 lblCevapD.Text = dataRow[6].ToString();
-                lblCevapE.Text = dataRow[7].ToString();
-                lblSoruCevap.Text = dataRow[8].ToString();
-                pictureBox1.ImageLocation = dataRow[9].ToString();
+                lblSoruCevap.Text = dataRow[7].ToString();
+                pictureBox1.ImageLocation = dataRow[8].ToString();
                 if (SoruCevap[Convert.ToInt16(dataRow[0])] == "A")     // Soruya Cevap Verdiysem, Cevap Verdiğim Şıkkı Yeşil Yap.
                 {
                     butunButonlariBoya();
@@ -152,11 +149,6 @@ namespace SmartExam
                     butunButonlariBoya();
                     btnD.BackColor = Color.LightGreen;
                 }
-                else if (SoruCevap[Convert.ToInt16(dataRow[0])] == "E")
-                {
-                    butunButonlariBoya();
-                    btnE.BackColor = Color.LightGreen;
-                }
                 else
                 {
                     butunButonlariBoya();
@@ -174,7 +166,6 @@ namespace SmartExam
             btnB.BackColor = Color.FromArgb(128, 255, 255);
             btnC.BackColor = Color.FromArgb(128, 255, 255);
             btnD.BackColor = Color.FromArgb(128, 255, 255);
-            btnE.BackColor = Color.FromArgb(128, 255, 255);
         }
 
         // Soru Cevaplama
@@ -206,13 +197,6 @@ namespace SmartExam
             butunButonlariBoya();
             SoruCevap[Convert.ToInt32(lblSoruNo1.Text)] = "D";
             btnD.BackColor = Color.LightGreen;
-        }
-
-        private void btnE_Click(object sender, EventArgs e)
-        {
-            butunButonlariBoya();
-            SoruCevap[Convert.ToInt32(lblSoruNo1.Text)] = "E";
-            btnE.BackColor = Color.LightGreen;
         }
 
         // Timer İşlemleri
@@ -286,7 +270,7 @@ namespace SmartExam
 
                 sinav.DersID = ders;
                 
-                ogr.SinavCozulenSoruKaydet(sinavYap,ogrenciID,ogr.sonSinavID(ogrenciID)+1);
+                ogr.SinavCozulenSoruKaydet(sinavYap,ogrenciID,ogr.sonSinavID()+1);
 
                 ogr.CozulenSinavKaydet(sinav,dogru,yanlis,bos,ogrenciID);
 
@@ -310,7 +294,6 @@ namespace SmartExam
             btnB.Enabled = false;
             btnC.Enabled = false;
             btnD.Enabled = false;
-            btnE.Enabled = false;
             lblCevap.Visible = true;
             lblSoruCevap.Visible = true;
         }

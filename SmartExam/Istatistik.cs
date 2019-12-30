@@ -20,10 +20,11 @@ namespace SmartExam
         {
             // Doğru Cevapların İstatistiği
 
-            SqlCommand istatistikGetirDogru = new SqlCommand("select (select Count(*)from Tbl_CozulmusSoru where Tbl_CozulmusSoru.KonuID = Tbl_Konu.KonuID and OgrenciID = @p2 and SınavID = @p3 and DogruYanlis=1),KonuAD from Tbl_Konu  where  DersID =  @p1 ", connect.baglanti());
+            SqlCommand istatistikGetirDogru = new SqlCommand("exec Istatistik @p1,@p2,@p3,@p4", connect.baglanti());
             istatistikGetirDogru.Parameters.AddWithValue("@p1", DersID);
             istatistikGetirDogru.Parameters.AddWithValue("@p2", OgrenciID);
             istatistikGetirDogru.Parameters.AddWithValue("@p3", SinavID);
+            istatistikGetirDogru.Parameters.AddWithValue("@p4", 1);
             SqlDataReader dtIstatistikDogru = istatistikGetirDogru.ExecuteReader();
             while (dtIstatistikDogru.Read())
             {
@@ -35,10 +36,11 @@ namespace SmartExam
 
             // Yanlış Cevapların İstatistiği
 
-            SqlCommand istatistikGetirYanlis = new SqlCommand("select (select Count(*)from Tbl_CozulmusSoru where Tbl_CozulmusSoru.KonuID = Tbl_Konu.KonuID and OgrenciID = @p2 and SınavID=@p3 and DogruYanlis=0),KonuAD from Tbl_Konu  where  DersID =  @p1 ", connect.baglanti());
+            SqlCommand istatistikGetirYanlis = new SqlCommand("exec Istatistik @p1,@p2,@p3,@p4", connect.baglanti());
             istatistikGetirYanlis.Parameters.AddWithValue("@p1", DersID);
             istatistikGetirYanlis.Parameters.AddWithValue("@p2", OgrenciID);
             istatistikGetirYanlis.Parameters.AddWithValue("@p3", SinavID);
+            istatistikGetirYanlis.Parameters.AddWithValue("@p4", 0);
             SqlDataReader dtIstatistikYanlis = istatistikGetirYanlis.ExecuteReader();
             while (dtIstatistikYanlis.Read())
             {

@@ -104,7 +104,6 @@ namespace SmartExam
             {
                 if (ogr.KisiEkle() == false)
                 {
-                    ogr.KisiEkle();
                     MessageBox.Show("Yeni Öğrenci Kaydı Eklendi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
@@ -170,6 +169,12 @@ namespace SmartExam
             {
                 MessageBox.Show("Kayıt Türü Seçiniz", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void dtDogumTarihi_EditValueChanged(object sender, EventArgs e)
+        {
+            DateTime tarih = DateTime.Today;
+            dtDogumTarihi.EditValue = tarih;
         }
     }
 }

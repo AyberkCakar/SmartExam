@@ -134,14 +134,13 @@ namespace SmartExam
             soruTable.Columns.Add("B Cevabı", typeof(string));
             soruTable.Columns.Add("C Cevabı", typeof(string));
             soruTable.Columns.Add("D Cevabı", typeof(string));
-            soruTable.Columns.Add("E Cevabı", typeof(string));
             soruTable.Columns.Add("Cevap", typeof(string));
             soruTable.Columns.Add("Resim", typeof(string));
             soruTable.Columns.Add("Ders", typeof(string));
             soruTable.Columns.Add("Konu", typeof(string));
             foreach (Soru question in soru.Sorular)
             {
-                soruTable.Rows.Add(question.SoruID, question.SoruIcerik, question.ACevabi, question.BCevabi, question.CCevabi, question.DCevabi, question.ECevabi, question.Cevap, question.Resim,  question.Ders, question.Konu);
+                soruTable.Rows.Add(question.SoruID, question.SoruIcerik, question.ACevabi, question.BCevabi, question.CCevabi, question.DCevabi, question.Cevap, question.Resim,  question.Ders, question.Konu);
                 gridSoru.DataSource = soruTable;
             }
             soru.Sorular.Clear();
@@ -156,11 +155,10 @@ namespace SmartExam
             rchB.Text = soruDataRow[3].ToString();
             rchC.Text = soruDataRow[4].ToString();
             rchD.Text = soruDataRow[5].ToString();
-            rchE.Text = soruDataRow[6].ToString();
-            cmbCevap.Text = soruDataRow[7].ToString();
-            txtSoruResim.Text = soruDataRow[8].ToString();
-            cmbSoruDers.Text = soruDataRow[9].ToString(); ;
-            cmbSoruKonu.Text = soruDataRow[10].ToString(); ;
+            cmbCevap.Text = soruDataRow[6].ToString();
+            txtSoruResim.Text = soruDataRow[7].ToString();
+            cmbSoruDers.Text = soruDataRow[8].ToString(); ;
+            cmbSoruKonu.Text = soruDataRow[9].ToString(); ;
         }
 
         void SoruBilgiTemizle()
@@ -171,7 +169,6 @@ namespace SmartExam
             rchB.Text = "";
             rchC.Text = "";
             rchD.Text = "";
-            rchE.Text = "";
             rchSoru.Text = "";
             cmbCevap.SelectedIndex = -1;
             cmbSoruKonu.SelectedIndex = -1;
@@ -199,12 +196,11 @@ namespace SmartExam
             question.BCevabi = rchB.Text;
             question.CCevabi = rchC.Text;
             question.DCevabi = rchD.Text;
-            question.ECevabi = rchE.Text;
             question.Cevap = cmbCevap.Text;
             question.Resim = txtSoruResim.Text;
 
-            string yasakKontrol = (FuncKontrol.formYasakKontrol(rchSoru.Text, rchA.Text, rchB.Text, rchC.Text, rchD.Text, rchE.Text));
-            string nullKontrol = FuncKontrol.formNullKontrol(rchSoru.Text, rchA.Text, rchB.Text, rchC.Text, rchD.Text, rchE.Text, cmbCevap.Text, cmbSoruDers.Text, cmbSoruKonu.Text);
+            string yasakKontrol = (FuncKontrol.formYasakKontrol(rchSoru.Text, rchA.Text, rchB.Text, rchC.Text, rchD.Text));
+            string nullKontrol = FuncKontrol.formNullKontrol(rchSoru.Text, rchA.Text, rchB.Text, rchC.Text, rchD.Text, cmbCevap.Text, cmbSoruDers.Text, cmbSoruKonu.Text);
 
             if (yasakKontrol == "Başarılı" && nullKontrol == "Başarılı")
             {
@@ -247,7 +243,6 @@ namespace SmartExam
             question.BCevabi = rchB.Text;
             question.CCevabi = rchC.Text;
             question.DCevabi = rchD.Text;
-            question.ECevabi = rchE.Text;
             question.Cevap = cmbCevap.Text;
             question.Resim = txtSoruResim.Text;
             ogretmen.SoruGuncelle(question, Convert.ToInt32(cmbSoruDers.SelectedIndex + 1), Convert.ToInt32(cmbSoruKonu.SelectedIndex + 1));
@@ -257,7 +252,7 @@ namespace SmartExam
         {
             if (txtSoruNo.Text != "")
             {
-                if (FuncKontrol.formYasakKontrol(rchSoru.Text, rchA.Text, rchB.Text, rchC.Text, rchD.Text, rchE.Text) == "Başarılı" && FuncKontrol.formNullKontrol(rchSoru.Text, rchA.Text, rchB.Text, rchC.Text, rchD.Text, rchE.Text, cmbCevap.Text, cmbSoruDers.Text, cmbSoruKonu.Text) == "Başarılı")
+                if (FuncKontrol.formYasakKontrol(rchSoru.Text, rchA.Text, rchB.Text, rchC.Text, rchD.Text) == "Başarılı" && FuncKontrol.formNullKontrol(rchSoru.Text, rchA.Text, rchB.Text, rchC.Text, rchD.Text, cmbCevap.Text, cmbSoruDers.Text, cmbSoruKonu.Text) == "Başarılı")
                 {
                     soruGuncelle();
                     MessageBox.Show("Soru Guncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);

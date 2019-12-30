@@ -15,7 +15,6 @@ namespace SmartExam
         public string BCevabi { get; set; }
         public string CCevabi { get; set; }
         public string DCevabi { get; set; }
-        public string ECevabi { get; set; }
         public string Cevap { get; set; }
         public string Resim { get; set; }
         public string Ders { get; set; }
@@ -29,7 +28,7 @@ namespace SmartExam
 
         public void TumSorular() 
         {
-            SqlCommand soruGetir = new SqlCommand("select So.SoruID,Soru,A,B,C,D,E,Cevap,Resim,De.DersAD,Ko.KonuAD from Tbl_Soru So inner join Tbl_Ders De on so.DersID = De.DersID inner join Tbl_Cevap Ce on So.SoruID = Ce.SoruID inner join Tbl_Konu Ko on Ko.KonuID = So.KonuID order by So.SoruID", connect.baglanti());
+            SqlCommand soruGetir = new SqlCommand("exec tumSorular", connect.baglanti());
             SqlDataReader Dtr = soruGetir.ExecuteReader();
             while (Dtr.Read())
             {
@@ -40,11 +39,10 @@ namespace SmartExam
                 soru.BCevabi = Dtr[3].ToString();
                 soru.CCevabi = Dtr[4].ToString();
                 soru.DCevabi = Dtr[5].ToString();
-                soru.ECevabi = Dtr[6].ToString();
-                soru.Cevap = Dtr[7].ToString();
-                soru.Resim = Dtr[8].ToString();
-                soru.Ders = Dtr[9].ToString();
-                soru.Konu = Dtr[10].ToString();
+                soru.Cevap = Dtr[6].ToString();
+                soru.Resim = Dtr[7].ToString();
+                soru.Ders = Dtr[8].ToString();
+                soru.Konu = Dtr[9].ToString();
                 Sorular.Add(soru);
             }
             connect.baglanti().Close();
